@@ -1,21 +1,26 @@
 {
-    "sections": {
-      "banner": {
-        "type": "banner_image-with-text",
-        "settings": {}
-      },
-      "challenge": {
-        "type": "challenge",
-        "settings": {}
-      },
-      "topic": {
-        "type": "topic",
-        "settings": {}
-      }
+  "sections": {
+    "banner": {
+      "type": "banner_image-with-text",
+      "settings": {}
     },
-    "order": [
-      "banner",
-      "challenge",
-      "topic"
-    ]
-  }
+    "challenge": {
+      "type": "challenge",
+      "settings": {}
+    },
+    "topic": {
+      "type": "topic",
+      "settings": {}
+    },
+    "right_image_with_text": {
+      "type": "right_image_with_text",
+      "settings": {}
+    }
+  },
+  "order": [
+    "banner",
+    "challenge",
+    "topic",
+    "right_image_with_text"
+  ]
+}
