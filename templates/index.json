@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
+    "custom_image_with_text": {
+      "type": "custom-image-with-text",
+      "settings": {}
+    },
+    "approach": {
+      "type": "approach",
+      "settings": {}
+    },
+    "brands": {
+      "type": "brands",
+      "settings": {}
+    },
+    "what_we_do": {
+      "type": "what_we_do",
+      "settings": {}
+    },
+    "service": {
+      "type": "service",
+      "settings": {}
+    },
+    "our_result": {
+      "type": "our_result",
+      "settings": {}
+    },
+    "our_partners": {
+      "type": "our_partners",
+      "settings": {}
+    },
+    "contact": {
+      "type": "contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "custom_image_with_text",
+    "approach",
+    "brands",
+    "what_we_do",
+    "service",
+    "our_result",
+    "our_partners",
+    "contact"
+  ]
+}

@@ -1,0 +1,67 @@
+<div class="top-image">
+    {% if section.settings.top_image != blank %}
+        <img src="{{ section.settings.top_image | image_url: width: 700 }}" alt="Original Image">
+    {% endif %}
+</div>
+<div class="page-width">
+    <div class="main-content brand-item-grid d-flex">
+        <div class="brand-item title-top-section">
+            <h1 class="title font-48 fw-700 m-0">{{ section.settings.heading }}</h1>
+            <div class="description font-22 color-black fw-400 m-0 lh-160">{{ section.settings.description }}</div>
+        </div>
+        {%- for block in section.blocks -%}
+            {% if forloop.index0 == 2 %}
+                <div class="brand-item title-bottom-section"></div>
+            {% endif %}
+            {% assign mo = forloop.index0 | modulo: 3 %}
+            <div class="brand-item {% if mo == 0 %}row-first{% endif %}" data-id="{{ forloop.index0 }}">
+                {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 300 }}" alt="Original Image">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Our Partners Section",
+    "class": "our-partners-section",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "top_image",
+            "label": "Top Image"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Partner Image",
+            "type": "partner_image",
+            "settings": 
+            [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Partner Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Our Partners"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,61 @@
+<div class="page-content">
+    <div class="grid">
+        {%- for block in section.blocks -%}
+            <div class="item">
+                <div class="item-number">
+                    {% if block.settings.number_image != blank %}
+                        <img src="{{ block.settings.number_image | image_url: width: 300 }}" alt="Original Image">
+                    {% endif %}
+                </div>
+                <div class="item-content">
+                    {% if block.settings.icon != blank %}
+                        <img src="{{ block.settings.icon | image_url: width: 300 }}" alt="Original Image">
+                    {% endif %}
+                    <h2 class="font-32 fw-700 title">{{ block.settings.heading }}</h2>
+                    <p class="description color-black font-15 fw-400">{{ block.settings.description }}</p>
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Service",
+    "class": "service-section page-width",
+    "tag": "section",
+    "blocks": [
+        {
+            "name": "Service Item",
+            "type": "service_item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Icon"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "number_image",
+                    "label": "Number Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Service"
+        }
+    ]
+}
+{% endschema %}

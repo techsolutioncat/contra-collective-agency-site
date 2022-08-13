@@ -1,0 +1,59 @@
+<div class="section-content">
+    <div class="page-width">
+        <div class="main-content">
+            <h1 class="title font-46 color-white m-0">{{ section.settings.heading }}</h1>
+            <p class="description font-15 fw-300 color-white m-0">{{ section.settings.description }}</p>
+            <div class="hero-button">
+                {% if section.settings.button_label != empty %}
+                <a href="{{ section.settings.button_link }}" class="page-button">
+                    {{ section.settings.button_label }}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="left-side-image">
+        {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | image_url: width: 700 }}" alt="Original Image">
+        {% endif %}
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Hero Section",
+    "class": "hero-section site-main-bg-color",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Hero Section"
+        }
+    ]
+}
+{% endschema %}

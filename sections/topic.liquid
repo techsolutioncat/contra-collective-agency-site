@@ -1,0 +1,66 @@
+<div class="page-width">
+    <div class="heading-box">
+        <h1 class="heading font-24 fw-700 color-black">{{ section.settings.title }}</h1>
+        <p class="description font-15 fw-400 color-black">{{ section.settings.description }}</p>
+    </div>
+    <div class="topic-item-box">
+        {% for block in section.blocks %}
+            {% assign mo = forloop.index0 | modulo: 2 %}
+            {% if mo == 0 %}
+                <ul>
+            {% endif %}
+            <li class="font-15 fw-500 color-black lh-140"><span class="topic">{{ block.settings.topic }}</span></li>
+            {% if mo == 1 %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% if section.settings.right_image != blank %}
+<div class="right-image">
+    <img src="{{ section.settings.right_image | image_url: width: 320 }}">
+</div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Topic Section",
+    "class": "topic-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "topic_item",
+            "name": "Topic Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "topic",
+                    "label": "Toic"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Topic"
+        }
+    ]
+}
+{% endschema %}

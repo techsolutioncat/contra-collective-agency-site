@@ -1,0 +1,21 @@
+{
+    "sections": {
+      "banner": {
+        "type": "banner_image-with-text",
+        "settings": {}
+      },
+      "challenge": {
+        "type": "challenge",
+        "settings": {}
+      },
+      "topic": {
+        "type": "topic",
+        "settings": {}
+      }
+    },
+    "order": [
+      "banner",
+      "challenge",
+      "topic"
+    ]
+  }

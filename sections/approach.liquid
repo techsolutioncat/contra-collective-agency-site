@@ -1,0 +1,183 @@
+<div class="page-width">
+    <div class="main-content d-flex">
+        <div class="grid-item w-50 d-flex">
+            <div class="our-approach w-50">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'our_approach' -%}
+                            <div class="title m-0 d-flex">
+                                <h3 class="font-24 m-0 fw-700">{{ block.settings.heading | escape }}</h3>
+                                {% if block.settings.image != empty %}
+                                    <img src="{{ block.settings.image | image_url: width: 300 }}" alt="Original Image">
+                                {% endif %}
+                            </div>
+                            <ul>
+                                {% if block.settings.text1 != empty %}<li class="font-15 fw-400"><span>{{ block.settings.text1 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text2 != empty %}<li class="font-15 fw-400"><span>{{ block.settings.text2 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text3 != empty %}<li class="font-15 fw-400"><span>{{ block.settings.text3 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text4 != empty %}<li class="font-15 fw-400"><span>{{ block.settings.text4 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text5 != empty %}<li class="font-15 fw-400"><span>{{ block.settings.text5 | escape }}</span></li>{% endif %}
+                            </ul>
+                    {% endcase %}
+                {% endfor %}
+            </div>
+            <div class="agency-models w-50">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'agency_models' -%}
+                            <div class="title m-0">
+                                <h3 class="font-24 fw-500 m-0">{{ block.settings.heading | escape }}</h3>
+                            </div>
+                            <ul>
+                                {% if block.settings.text1 != empty %}<li class="font-15 fw-300"><span>{{ block.settings.text1 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text2 != empty %}<li class="font-15 fw-300"><span>{{ block.settings.text2 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text3 != empty %}<li class="font-15 fw-300"><span>{{ block.settings.text3 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text4 != empty %}<li class="font-15 fw-300"><span>{{ block.settings.text4 | escape }}</span></li>{% endif %}
+                                {% if block.settings.text5 != empty %}<li class="font-15 fw-300"><span>{{ block.settings.text5 | escape }}</span></li>{% endif %}
+                            </ul>
+                    {% endcase %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="grid-item w-50 different-approach">
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                    {%- when 'different_approach' -%}
+                        <div class="title m-0">
+                            <h2 class="font-36 fw-700 m-0">{{ block.settings.heading | escape }}</h2>
+                        </div>
+                        <div class="description font-17 fw-400">
+                            <p class="font-17 fw-300">{{ block.settings.description }}</p>
+                        </div>
+                        {% if block.settings.button_label != empty %}
+                        <div class="approach-button">
+                            <a href="{{ block.settings.button_link }}" class="page-button">
+                                {{ block.settings.button_label }}
+                            </a>
+                        </div>
+                        {% endif %}
+                {% endcase %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Approach Section",
+    "class": "approach-section",
+    "blocks": [
+        {
+            "name": "Our Approach",
+            "type": "our_approach",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "text1",
+                    "label": "Text 1"
+                },
+                {
+                    "type": "text",
+                    "id": "text2",
+                    "label": "Text 2"
+                },
+                {
+                    "type": "text",
+                    "id": "text3",
+                    "label": "Text 3"
+                },
+                {
+                    "type": "text",
+                    "id": "text4",
+                    "label": "Text 4"
+                },
+                {
+                    "type": "text",
+                    "id": "text5",
+                    "label": "Text 5"
+                }
+            ]
+        },
+        {
+            "name": "Agency Models",
+            "type": "agency_models",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "text1",
+                    "label": "Text 1"
+                },
+                {
+                    "type": "text",
+                    "id": "text2",
+                    "label": "Text 2"
+                },
+                {
+                    "type": "text",
+                    "id": "text3",
+                    "label": "Text 3"
+                },
+                {
+                    "type": "text",
+                    "id": "text4",
+                    "label": "Text 4"
+                },
+                {
+                    "type": "text",
+                    "id": "text5",
+                    "label": "Text 5"
+                }
+            ]
+        },        
+        {
+            "name": "Different Approach",
+            "type": "different_approach",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button Link"
+                },
+                {
+                    "type": "text",
+                    "id": "button_label",
+                    "label": "Button Label"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Approach"
+        }
+    ]
+}
+{% endschema %}

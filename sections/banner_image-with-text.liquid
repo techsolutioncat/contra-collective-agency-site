@@ -1,0 +1,101 @@
+<div class="banner-image">
+    {% if section.settings.main_image != blank %}
+        <img class="main-image" src="{{ section.settings.main_image | image_url: width: 2048 }}" alt="Original Image">
+    {% endif %}
+    <div class="overlay"></div>
+</div>
+<div class="main-content">
+    <div class="page-width">
+        <div class="left-text-box">
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                    {%- when 'bannner-logo-image' -%}
+                        {% if block.settings.banner_logo_image != blank %}
+                            <img class="bannner-logo-image" src="{{ block.settings.banner_logo_image | image_url: width: 600 }}" alt="Original Image">
+                        {% endif %}
+                    {%- when 'heading' -%}
+                        <h1 class="heading font-48 fw-700 color-black">{{ block.settings.heading }}</h1>
+                    {%- when 'description' -%}
+                        <p class="description font-15 fw-400 color-black">{{ block.settings.description }}</p>
+                {% endcase %}
+            {% endfor %}
+        </div>
+        <div class="subimage-box">
+            {% if section.settings.sub_image != blank %}
+                <img class="main-image" src="{{ section.settings.sub_image | image_url: width: 2048 }}" alt="Original Image">
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="right-image">
+    {% if section.settings.right_image != blank %}
+        <img class="main-image" src="{{ section.settings.right_image | image_url: width: 1600 }}" alt="Original Image">
+    {% endif %}
+</div>
+
+{% schema %}
+{
+    "name": "Banner Image With Text",
+    "class": "banner_image-with-text",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "main_image",
+            "label": "Main Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "sub_image",
+            "label": "Sub Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "bannner-logo-image",
+            "name": "Banner Logo Image",
+            "limit": 1,
+            "settings": [
+                {
+                "type": "image_picker",
+                "id": "banner_logo_image",
+                "label": "Image"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "name": "Heading",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                }
+            ]
+        },
+        {
+            "type": "description",
+            "name": "Description",
+            "limit": 1,
+            "settings": [
+                {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Banner Image With Text"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,59 @@
+<div class="section-content">
+    <div class="page-width">
+        <div class="section-title">
+            <h1 class="font-48 fw-700 heading">{{ section.settings.heading }}</h1>
+            <p class="font-24 fw-400 subtitle">{{ section.settings.subtitle }}</p>
+        </div>
+        <div class="grid">
+            {%- for block in section.blocks -%}
+                <div class="item">
+                    <h1 class="font-48 fw-700 percent">{{ block.settings.percent }}</h1>
+                    <p class="font-18 fw-500 description">{{ block.settings.description }}</p>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Our Result Section",
+    "class": "our-result-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Item Grid",
+            "type": "item_grid",
+            "limit": 3,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "percent",
+                    "label": "Text"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Our Result Section"
+        }
+    ]
+}
+{% endschema %}

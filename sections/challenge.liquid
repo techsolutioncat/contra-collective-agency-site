@@ -1,0 +1,36 @@
+<div class="page-width">
+    <div class="text-box w-50">
+        <h1 class="heading font-36 fw-700 color-black">{{ section.settings.title }}</h1>
+        <p class="description font-18 fw-400 color-black">{{ section.settings.description }}</p>
+        <p class="description font-18 fw-600 color-black">{{ section.settings.bottom_description }}</p>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Challenge",
+    "class": "challenge",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "textarea",
+            "id": "bottom_description",
+            "label": "Bottom Description"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Challenge"
+        }
+    ]
+}
+{% endschema %}
