@@ -12,8 +12,8 @@
       "type": "topic",
       "settings": {}
     },
-    "right_image_with_text": {
-      "type": "right_image_with_text",
+    "left_image_with_text": {
+      "type": "left_image_with_text",
       "settings": {}
     }
   },
@@ -21,6 +21,6 @@
     "banner",
     "challenge",
     "topic",
-    "right_image_with_text"
+    "left_image_with_text"
   ]
 }

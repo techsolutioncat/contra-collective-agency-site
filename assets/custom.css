@@ -766,6 +766,73 @@ header.header {
 }
 /* End challenge custom style css */
 
+/* Begin right_image_with_text section custom style css */
+section.left_image-with-text-section {
+    padding: 84px 0px;
+}
+section.left_image-with-text-section .note {
+    position: relative;
+    display: flex;
+    width: 400px;
+}
+section.left_image-with-text-section .note::before{
+    content: "“";
+    font-size: 100px;
+    color: #fff;
+    position: absolute;
+    top: -59px;
+    left: -22px;
+    z-index: 0;
+}
+section.left_image-with-text-section .note::after{
+    content: "”";
+    font-size: 100px;
+    color: #fff;
+    position: absolute;
+    z-index: 0;
+    top: -13px;
+    right: 65px;
+}
+section.left_image-with-text-section .right-bottim-image {
+    text-align: right;
+}
+section.left_image-with-text-section .right-bottim-image img {
+    width: 170px;
+}
+section.left_image-with-text-section .note p{
+    z-index: 1;
+}
+section.left_image-with-text-section .image-wrap {
+    padding-right: 70px;
+}
+section.left_image-with-text-section .image-wrap img {
+    width: 100%;
+    border: solid 6px #fff;
+}
+@media (max-width: 1024px)
+{
+    .left_image-with-text-section .page-width {
+        flex-direction: column;
+    }
+    section.left_image-with-text-section .image-wrap {
+        padding: 0px;
+        width: 100%;
+    }
+    section.left_image-with-text-section .text-wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 425px)
+{
+    .topic-section .right-image { 
+        display: none;
+    }
+    section.left_image-with-text-section .note {
+        width: 100%;
+    }
+}
+/* End right_image_with_text section custom style css */
+
 /* Begin Footer Custom Style CSS */
 .section-footer-padding {
     padding-top: 132px !important;

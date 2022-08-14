@@ -163,6 +163,9 @@ h1, h2, h3, p, a, li, select {
 ul {
     padding: 0px;
 }
+.m-40 {
+    margin-top: 40px;
+}
 @media (max-width: 768px) {
     h1.heading {
         font-size: 31px;
