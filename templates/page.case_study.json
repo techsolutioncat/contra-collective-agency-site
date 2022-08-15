@@ -15,12 +15,22 @@
     "left_image_with_text": {
       "type": "left_image_with_text",
       "settings": {}
+    },
+    "class_friendly": {
+      "type": "class_friendly",
+      "settings": {}
+    },
+    "text_banner": {
+      "type": "text_banner",
+      "settings": {}
     }
   },
   "order": [
     "banner",
     "challenge",
     "topic",
-    "left_image_with_text"
+    "left_image_with_text",
+    "class_friendly",
+    "text_banner"
   ]
 }

@@ -11,7 +11,9 @@
         </div>
         {% if section.settings.note != blank %}
             <div class="note m-40">
-                <p class="font-24 fw-600 m-0 color-yellow">{{ '“' | append: section.settings.note | append: '”' }}</p>
+                {% if section.settings.note != blank %}
+                    <p class="font-24 fw-600 m-0 color-yellow">{{ '“' | append: section.settings.note | append: '”' }}</p>
+                {% endif %}
             </div>
         {% endif %}
         {% if section.settings.brand_image != blank %}

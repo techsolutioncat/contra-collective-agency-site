@@ -72,3 +72,199 @@ section.left_image-with-text-section .right-effect {
     }
 }
 /* End right_image_with_text section custom style css */
+
+/* Begin class_friendly section custom style css */
+.class-friendly {
+    margin-top: 76px;
+}
+.class-friendly .left-text-box {
+    width: 470px;
+}
+.class-friendly .main-content {
+    display: flex;
+    justify-content: space-between;
+}
+.class-friendly .right-content h1.heading{
+    width: 470px;
+}
+.class-friendly .right-content .image1{
+    margin-top: 77px;
+}
+.class-friendly .bottom-content {
+    position: relative;
+    margin-top: -600px;
+}
+.class-friendly .bottom-content .image2
+{
+    position: absolute;
+    left: 375px;
+}
+.class-friendly .bottom-content .image3
+{
+    margin-left: -121px;
+}
+.class-friendly .right_bottom-text-box
+{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.class-friendly .right_bottom-text-box p
+{
+    width: 355px;
+    margin-top: -273px;
+}
+.class-friendly .full-width {
+    display: flex;
+    justify-content: end;
+    margin-top: -11px;
+}
+.class-friendly .rectangle {
+    width: calc(54% + 5px);
+    position: absolute;
+}
+.class-friendly .rectangle::before{
+    display: block;
+    height: 35px;
+    content: "";
+    border-left: 16px solid transparent;
+    border-top: 28px solid #fff;
+    z-index: 2;
+}
+.banner__media {
+    z-index: -1;
+}
+@media (max-width: 1200px)
+{
+    .class-friendly .main-content {
+        flex-direction: column;
+    }
+    .class-friendly .left-text-box,
+    .class-friendly .right-content h1.heading {
+        width: 100%;
+    }
+    .class-friendly .right_bottom-text-box p
+    {
+        margin-top: 0px;
+    }
+    .class-friendly .rectangle {
+        display: none;
+    }
+    .class-friendly .right-content .image1 {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 1024px)
+{
+    .class-friendly .bottom-content .image2 {
+        left: 0px;
+        position: relative;
+    }
+    .class-friendly .bottom-content .image3 {
+        display: none;
+    }
+}
+@media (max-width: 768px)
+{
+    .class-friendly .right-content .image1 {
+        margin-top: 20px;
+    }
+    .class-friendly .right-content .image1 img{
+        width: 100%;
+    }
+    .class-friendly .bottom-content {
+        display: none;
+    }
+    .class-friendly .right_bottom-text-box p {
+        width: 100%;
+    }
+}
+/* End class_friendly section custom style css */
+
+/* Begin text_banner section custom style css */
+section.text_banner {
+    background: #000D46;
+    box-shadow: 0px 4px 17px rgba(0, 13, 70, 0.1);
+    position: relative;
+}
+section.text_banner .top-banner {
+    position: absolute;
+    margin-top: -28px;
+    display: flex;
+}
+section.text_banner .top-banner .left {
+    display: block;
+    width: 200px;
+    background: #000d46;
+}
+section.text_banner .top-banner .right {
+    display: block;
+    height: 28px;
+    content: "";
+    border-left: 16px solid #000d46;
+    border-top: 28px solid transparent;
+    z-index: 2;
+}
+section.text_banner .bottom-banner {
+    display: flex;
+}
+section.text_banner .bottom-banner .left {
+    display: block;
+    width: 100%;
+    background: #000d46;
+}
+section.text_banner .bottom-banner .right {
+    display: block;
+    height: 26px;
+    content: "";
+    border-left: 30px solid #000d46;
+    border-bottom: 26px solid #fff;
+    z-index: 2;
+    width: 200px;
+}
+section.text_banner .section-content {
+    padding: 90px 0px;
+}
+section.text_banner .description {
+    position: relative;
+    text-align: center;
+}
+section.text_banner .description .left-double-quote {
+    position: absolute;
+    left: 0px;
+    top: -10px;
+}
+section.text_banner h1.heading {
+    text-align: center;
+}
+section.text_banner .description .right-double-quote {
+    position: absolute;
+    right: 0px;
+    bottom: -35px;
+}
+section.text_banner .description:before {
+    content: "“";
+    font-size: 100px;
+    color: #ffffff30;
+    position: absolute;
+    z-index: 0;
+    top: -59px;
+    left: -25px;
+}
+section.text_banner .description:after {
+    content: "”";
+    font-size: 100px;
+    color: #ffffff30;
+    position: absolute;
+    z-index: 0;
+    bottom: -116px;
+    right: -26px;
+}
+@media (max-width: 768px) {
+    section.text_banner .top-banner,
+    section.text_banner .bottom-banner {
+        display: none;
+    }
+}
+/* End text_banner section custom style css */
