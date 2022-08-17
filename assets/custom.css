@@ -366,7 +366,7 @@ header.header {
 }
 /* End service section custom style css */
 
-/* End our_result section custom style css */
+/* Begin our_result section custom style css */
 .our-result-section {
     margin-top: 100px;
     background-repeat: no-repeat;
@@ -931,7 +931,64 @@ section.image-bar .footer-bar .page-width {
 /* End image_bar section custom style css */
 
 /* Begin glance-section custom style css */
-
+.glance-section {
+    margin-top: 100px;
+    background-repeat: no-repeat;
+}
+.glance-section .section-content {
+    /* background-image: url('our_result_bg.png'); */
+    background-repeat: no-repeat;
+    padding: 100px 0px 73px 0px;
+    background: linear-gradient(35.25deg, #6DB7F0 -100.16%, rgba(109, 183, 240, 0) 46.02%);
+}
+.glance-section .section-title {
+    text-align: center;
+}
+.glance-section .section-content .grid-row .item:nth-child(1) h1,
+.glance-section .section-content .grid-row .item:nth-child(2) h1 {
+    text-shadow: 0px 10px 25px rgb(205 215 255 / 70%);
+    border-right: 2.5px solid #F5C244;
+}
+.glance-section .grid-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.glance-section .grid-row .item {
+    width: 33.33%;
+    height: 205px;
+    text-align: center;
+    padding: 0px 33px;
+    /* border: solid 3px rgb(232 237 241); */
+}
+@media (max-width: 990px) {
+    .glance-section .section-content .grid-row .item:nth-child(1) h1,
+    .glance-section .section-content .grid-row .item:nth-child(2) h1 {
+        border: none;
+    }
+    .glance-section .grid-row {
+        flex-wrap: wrap;
+    }
+    .glance-section .grid-row .item {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0px;
+    }
+    .glance-section .section-content {
+        background-image: unset;
+        padding: 0px;
+    }
+    .glance-section .section-title h1.heading,
+    .glance-section .grid-row .item h1.percent
+    {
+        font-size: 34px;
+    }
+    .glance-section .section-title .subtitle,
+    .glance-section .grid-row .item .description
+    {
+        font-size: 18px;
+    }
+}
 /* End glance-section custom style css */
 
 /* Begin Footer Custom Style CSS */

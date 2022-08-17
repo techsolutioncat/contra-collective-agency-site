@@ -47,6 +47,10 @@
     "image_bar": {
       "type": "image_bar",
       "settings": {}
+    },
+    "glance": {
+      "type": "glance",
+      "settings": {}
     }
   },
   "order": [
@@ -61,6 +65,7 @@
     "product_about",
     "results",
     "own_words",
-    "image_bar"
+    "image_bar",
+    "glance"
   ]
 }
