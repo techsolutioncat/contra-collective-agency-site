@@ -43,6 +43,10 @@
     "own_words": {
       "type": "own_words",
       "settings": {}
+    },
+    "image_bar": {
+      "type": "image_bar",
+      "settings": {}
     }
   },
   "order": [
@@ -56,6 +60,7 @@
     "location",
     "product_about",
     "results",
-    "own_words"
+    "own_words",
+    "image_bar"
   ]
 }

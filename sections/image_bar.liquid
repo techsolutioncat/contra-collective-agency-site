@@ -1,0 +1,38 @@
+<div class="full-width">
+    {% if section.settings.image != blank %}
+        <div class="main-image">
+            <img src="{{ section.settings.image | image_url : width: 2000 }}">
+        </div>
+        <div class="footer-bar">
+            <div class="page-width">
+                <img src="{{ 'location_pointer.png' | asset_url }}">
+                <p class="font-18 fw-300 lh-160 m-0">{{ section.settings.text }}</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% schema %}
+{
+    "name": "Image Bar",
+    "class": "image-bar",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Image Bar"
+        }
+    ]
+}
+{% endschema %}

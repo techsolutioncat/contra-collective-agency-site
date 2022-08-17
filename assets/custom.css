@@ -894,7 +894,45 @@ section.results .left-content img {
 }
 /* End results section custom style css */
 
+/* Begin image_bar section custom style css */
+section.image-bar {
+    position: relative;
+}
+section.image-bar .main-image {
+    max-height: 650px;
+    display: flex;
+}
+section.image-bar .main-image img {
+    width: 100%;
+}
+section.image-bar .footer-bar {
+    height: 92px;
+    background: #F6F8FF;
+    opacity: 0.85;
+    box-shadow: 0px 4px 17px rgba(0, 13, 70, 0.01);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+section.image-bar .footer-bar .page-width {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+@media (max-width: 500px) {
+    section.image-bar .footer-bar .page-width {
+        justify-content: center;
+    }
+    section.image-bar .footer-bar {
+        height: 65px;
+    }
+}
+/* End image_bar section custom style css */
 
+/* Begin glance-section custom style css */
+
+/* End glance-section custom style css */
 
 /* Begin Footer Custom Style CSS */
 .section-footer-padding {
