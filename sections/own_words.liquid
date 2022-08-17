@@ -1,0 +1,80 @@
+<div class="top-banner">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+<div class="section-content">
+    <div class="right-image">
+        {% if section.settings.right_image != blank %}
+            <img src="{{ section.settings.right_image | image_url : width: 700 }}">
+        {% endif %}
+    </div>
+    <div class="right-gradient">
+        {% if section.settings.right_gradient_image != blank %}
+            <img src="{{ section.settings.right_gradient_image | image_url : width: 700 }}">
+        {% endif %}
+    </div>
+    <div class="page-width">
+        <h1 class="heading font-36 fw-700 lh-120 color-white">{{ section.settings.heading }}</h1>
+        <div class="description">
+            {% if section.settings.description != blank %}
+                <p class="left-double-quote m-0 color-yellow font-48">“</p>
+                <p class="font-24 fw-400 lh-160 color-white m-0">{{ section.settings.description }}</p>
+                <p class="right-double-quote m-0 color-yellow font-48">”</p>
+            {% endif %}
+        </div>
+        <div class="bottom-text-box">
+            <p class="m-40">
+                <span class="font-18 lh-160 fw-300 color-white">{{ section.settings.bottom_text1 }}</span><span class="font-18 lh-160 fw-500 color-white">{{ section.settings.bottom_text2 }}</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="bottom-banner">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+{% schema %}
+{
+    "name": "Own Words",
+    "class": "own_words_banner",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_gradient_image",
+            "label": "Right Gradient Image"
+        },
+        {
+            "type": "text",
+            "id": "bottom_text1",
+            "label": "Bottom Text1"
+        },
+        {
+            "type": "text",
+            "id": "bottom_text2",
+            "label": "Bottom Text2"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Own Words"
+        }
+    ]
+}
+{% endschema %}

@@ -841,6 +841,61 @@ section.left_image-with-text-section .image-wrap img {
 /* Begin text_banner section custom style css */
 /* End text_banner section custom style css */
 
+/* Begin customer_experience section custom style css */
+
+/* End customer_experience section custom style css */
+
+/* Begin location section custom style css */
+section.location_section {
+    background: #a4bfea;
+    position: relative;
+}
+section.location_section .image,
+section.location_section .image img {
+    width: 100%;
+}
+section.location_section .left_image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@media (max-width: 768px) {
+    section.location_section .left_image {
+        width: 120px;
+    }
+    section.location_section .left_image img {
+        width: 100%;
+    }
+}
+/* End location section custom style css */
+
+/* Begin product_about custom style css */
+section.product_about {
+    margin-top: 76px;
+}
+/* End product_about custom style css */
+
+/* Begin results section custom style css */
+section.results .left-content img {
+    width: 100%;
+}
+@media (max-width: 1024px)
+{
+    section.results {
+        flex-direction: column;
+    }
+    section.results .page-width {
+        flex-direction: column;
+    }
+    section.results .left-content,
+    section.results .right-content {
+        width: 100%;
+    }
+}
+/* End results section custom style css */
+
+
+
 /* Begin Footer Custom Style CSS */
 .section-footer-padding {
     padding-top: 132px !important;

@@ -1,0 +1,39 @@
+<div class="page-width">
+    <div class="image">
+        {% if section.settings.image !=  blank %}
+            <img src="{{ section.settings.image | image_url: width: 700 }}" alt="Original Image">
+        {% endif %}
+    </div>
+</div>
+<div class="full-width">
+    <div class="left_image">
+        {% if section.settings.left_image !=  blank %}
+            <img src="{{ section.settings.left_image | image_url: width: 700 }}" alt="Original Image">
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Location",
+    "class": "location_section",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Left Image"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Location"
+        }
+    ]
+}
+{% endschema %}

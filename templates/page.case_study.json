@@ -23,6 +23,26 @@
     "text_banner": {
       "type": "text_banner",
       "settings": {}
+    },
+    "customer_experience": {
+      "type": "customer_experience",
+      "settings": {}
+    },
+    "location": {
+      "type": "location",
+      "settings": {}
+    },
+    "product_about": {
+      "type": "product_about",
+      "settings": {}
+    },
+    "results": {
+      "type": "results",
+      "settings": {}
+    },
+    "own_words": {
+      "type": "own_words",
+      "settings": {}
     }
   },
   "order": [
@@ -31,6 +51,11 @@
     "topic",
     "left_image_with_text",
     "class_friendly",
-    "text_banner"
+    "text_banner",
+    "customer_experience",
+    "location",
+    "product_about",
+    "results",
+    "own_words"
   ]
 }
