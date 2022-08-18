@@ -97,11 +97,6 @@
       </div>
     </div>
 </div>
-{% if section.settings.image != blank %}
-  <div class="footer-left-image">
-    <img src="{{ section.settings.image | image_url: width: 700 }}" alt="Original Image">
-  </div>
-{% endif %}
 
 {% schema %}
 {
@@ -117,11 +112,6 @@
             "type": "textarea",
             "id": "text",
             "label": "Text"
-        },
-        {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Left Image"
         }
     ],
     "presets": [

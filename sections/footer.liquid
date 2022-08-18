@@ -37,6 +37,11 @@
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" id="get_in_touch">
+  {% if section.settings.footer_image != blank %}
+    <div class="footer-left-image">
+      <img src="{{ section.settings.footer_image | image_url : width: 1024 }}">
+    </div>
+  {% endif %}
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
@@ -499,6 +504,11 @@
     }
   ],
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_image",
+      "label": "Footer Image"
+    },
     {
       "type": "select",
       "id": "color_scheme",

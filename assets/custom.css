@@ -579,10 +579,10 @@ header.header {
 .contact-section .meta-group {
     justify-content: space-between;
 }
-.contact-section .footer-left-image img{
+/* .contact-section .footer-left-image img{
     position: absolute;
     top: 532px;
-}
+} */
 .contact-section #ContactForm-budget {
     background: transparent;
     border: none;
@@ -607,9 +607,9 @@ header.header {
         max-width: 100%;
         padding: 0;
     }
-    .contact-section .footer-left-image {
+    /* .contact-section .footer-left-image {
         display: none;
-    }
+    } */
     .contact-section .image-with-text__text {
         width: 100%;
     }
@@ -1191,6 +1191,20 @@ footer li.social-icons .list-social__link {
 }
 footer .copyright {
     text-align: right;
+}
+footer {
+    position: relative;
+}
+footer .footer-left-image {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    z-index: 1;
+}
+@media (max-width: 1000px) {
+    footer .footer-left-image {
+        display: none;
+    }
 }
 @media (max-width: 750px) {
     .footer-block-image {
