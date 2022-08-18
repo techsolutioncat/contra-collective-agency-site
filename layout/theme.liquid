@@ -209,6 +209,11 @@
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
       
+    <!-- Include plugin scripts -->
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+    <!-- Include plugin scripts -->
+
     {{ 'common.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
 

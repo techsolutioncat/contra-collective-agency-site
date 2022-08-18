@@ -991,6 +991,168 @@ section.image-bar .footer-bar .page-width {
 }
 /* End glance-section custom style css */
 
+/* Begin contact_us custom style css */
+section.contact_us {
+    background: #151515;
+}
+section.contact_us .page-width {
+    text-align: center;
+}
+section.contact_us .section-content .btn-contact_us {
+    margin-top: 56px;
+}
+section.contact_us a.button {
+    background-color: #EC772F;
+}
+section.contact_us .section-content {
+    position: relative;
+    padding: 85px 0px;
+}
+section.contact_us .section-content .left-image {
+    position: absolute;
+    left: 0px;
+    top: -180px;
+}
+
+/* End contact_us custom style css */
+
+/* Begin summary section custom style css */
+section.summary {
+    padding: 135px 0 86px;
+}
+section.summary .summary p {
+    max-width: 470px;
+}
+section.summary .services ul li,
+section.summary .technology_solutions ul li
+{
+    color: #D1DCFF;
+    margin-bottom: 18px;
+}
+section.summary .services ul li span
+{
+    color: #1A1A1A;
+}
+section.summary .technology_solutions ul li span
+{
+    color: #4F4F4F;
+}
+section.summary .approach-button {
+    margin-top: 60px;
+}
+section.summary .main-content .grid-item .services .title
+{
+    align-items: flex-start;
+}
+section.summary .main-content .grid-item .services h3,
+section.summary .main-content .grid-item .technology_solutions h3
+{
+    max-width: 170px;
+}
+section.summary .main-content .grid-item .services,
+section.summary .main-content .grid-item .technology_solutions
+{
+    padding-right: 12px;
+}
+section.summary .main-content .summary .title {
+    max-width: 267px;
+}
+section.summary .main-content .grid-item .services .title,
+section.summary .main-content .grid-item .technology_solutions .title,
+section.summary .main-content .summary .title {
+    height: 80px;
+}
+@media (max-width: 990px) {
+    section.summary .main-content {
+        flex-direction: column;
+    }
+    section.summary .main-content .grid-item {
+        width: 100%;
+    }
+    section.summary .summary {
+        padding-left: 0px;
+    }
+}
+@media (max-width: 600px) {
+    section.summary .main-content .grid-item {
+        display: grid;
+    }
+    section.summary .main-content .grid-item .services,
+    section.summary .main-content .grid-item .technology_solutions
+    {
+        width: 100%;
+        padding: 0px 15px;
+    }
+}
+/* End summary section custom style css */
+
+/* End similar_projects section custom style css */
+.similar_projects {
+    background: #ECF0FF;
+    padding: 90px 0px;
+}
+.similar_projects .swiper {
+    width: 100%;
+    height: 100%;
+}
+.similar_projects .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.similar_projects .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.similar_projects .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+.similar_projects .swiper-slide .text-box {
+    padding: 30px 0px;
+}
+.similar_projects h1.heading {
+    text-align: center;
+}
+.similar_projects .mySwiper {
+    margin-top: 94px;
+}
+.similar_projects .swiper-button-next,
+.similar_projects .swiper-button-prev {
+    display: block;
+}
+.similar_projects .swiper-button-next:after,
+.similar_projects .swiper-button-prev:after {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.similar_projects .slide-image {
+    cursor: pointer;
+    height: 285px;
+    display: flex;
+    align-items: center;
+}
+.similar_projects .btn-see-detail {
+    display: none;
+}
+/* End similar_projects section custom style css */
+
 /* Begin Footer Custom Style CSS */
 .section-footer-padding {
     padding-top: 132px !important;

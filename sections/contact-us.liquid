@@ -1,0 +1,64 @@
+<div class="top-banner">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+<div class="section-content">
+    <div class="page-width">
+        <p class="font-24 fw-500 lh-160 color-white">{{ section.settings.description }}</p>
+        <div class="btn-contact_us">
+            {% if section.settings.button_link != blank %}
+                <a class="page-button font-18 fw-600 lh-138" href="{{ section.settings.button_link}}">{{ section.settings.button_label}}</a>
+            {% endif %}
+        </div>
+        <div class="gradient_image">
+            {% if section.settings.gradient_image != blank %}
+                <img src="{{ section.settings.gradient_image | image_url : width: 500 }}">
+            {% endif %}
+        </div>
+    </div>
+    <div class="left-image">
+        {% if section.settings.left_image != blank %}
+            <img src="{{ section.settings.left_image | image_url : width: 500 }}">
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Contact Us",
+    "class": "contact_us",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Left Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "gradient_image",
+            "label": "Gradient Image"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Contact Us"
+        }
+    ]
+}
+{% endschema %}

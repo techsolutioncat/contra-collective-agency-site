@@ -1,0 +1,79 @@
+<div class="page-width">
+    <div class="line">
+        <div class="hr"></div>
+    </div>
+    <div class="main-content">
+        <h1 class="heading font-36 fw-700 lh-120 m-0">{{ section.settings.heading | escape }}</h1>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                    <div class="swiper-slide">
+                        <div class="slide-image">
+                            {% if block.settings.image != blank %}
+                                <img src="{{ block.settings.image | image_url : width: 500 }}">
+                            {% endif %}
+                            <div class="btn-see-detail">
+                                <a href="{{ block.setting.button_link }}" class="page-button font-18 fw-600 lh-138">See Details</a>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <p class="slide-title font-24 fw-600 m-0">{{ block.settings.title }}</p>
+                            <p class="slide-title font-24 fw-400 m-0">{{ block.settings.subtitle }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Similar Projects",
+    "class": "similar_projects",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "slide",
+            "type": "slide",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "subtitle",
+                    "label": "Subtitle"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "url",
+                    "id": "detail_link",
+                    "label": "Detail Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Similar Projects"
+        }
+    ]
+}
+{% endschema %}

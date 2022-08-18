@@ -17,4 +17,45 @@ $(document).ready(function () {
 			},700);
 		}
 	});
- });
+
+	if($(".similar_projects .mySwiper").length) {
+		var swiper = new Swiper(".similar_projects .mySwiper", {
+			slidesPerView: 3.5,
+			spaceBetween: 30,
+			slidesPerGroup: 1,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			breakpoints: {
+				375: {
+					slidesPerView: 1
+				},
+				425: {
+					slidesPerView: 1
+				},
+				500: {
+				  slidesPerView: 1
+				},
+				1024: {
+				  slidesPerView: 3.5
+				}
+			  }
+		});
+
+		$('.similar_projects .slide-image').mouseover(function() {
+			$(this).find('img').css('display', 'none');
+			$(this).find('.btn-see-detail').css('display', 'block');
+		});
+		$('.similar_projects .slide-image').mouseout(function() {
+			$(this).find('img').css('display', 'block');
+			$(this).find('.btn-see-detail').css('display', 'none');
+		});
+	}
+});
