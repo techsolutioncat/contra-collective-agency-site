@@ -8,7 +8,7 @@
             <h1 class="heading font-34 fw-700 m-0 color-black">{{ section.settings.heading }}</h1>
             {% if section.settings.image1 != blank %}
                 <div class="image1">
-                    <img src="{{ section.settings.image1 | image_url: width: 700 }}" alt="Original Image">
+                    <img src="{{ section.settings.image1 | image_url: width: 1000 }}" alt="Original Image">
                 </div>
             {% endif %}
         </div>
@@ -16,14 +16,16 @@
     <div class="bottom-content">
         {% if section.settings.image2 != blank %}
             <div class="image2">
-                <img src="{{ section.settings.image2 | image_url: width: 700 }}" alt="Original Image">
+                <img src="{{ section.settings.image2 | image_url: width: 1000 }}" alt="Original Image">
             </div>
         {% endif %}
-        {% if section.settings.image3 != blank %}
-            <div class="image3">
-                <img src="{{ section.settings.image3 | image_url: width: 700 }}" alt="Original Image">
-            </div>
-        {% endif %}
+        <div class="image3">
+            {% if section.settings.image3 != blank %}
+                <img src="{{ section.settings.image3 | image_url: width: 1000 }}" alt="Original Image">
+            {% else %}
+                <img src="{{ 'blank.png' | asset_url }}">
+            {% endif %}
+        </div>
     </div>
     <div class="right_bottom-text-box">
         <p class="text3 font-24 fw-500 lh-160 color-black">{{ section.settings.text3 }}</p>

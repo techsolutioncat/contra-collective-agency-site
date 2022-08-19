@@ -932,7 +932,7 @@ section.image-bar .footer-bar .page-width {
 
 /* Begin glance-section custom style css */
 .glance-section {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     background-repeat: no-repeat;
 }
 .glance-section .section-content {

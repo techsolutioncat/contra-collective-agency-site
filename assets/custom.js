@@ -33,6 +33,9 @@ $(document).ready(function () {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
 			},
+			autoplay: {
+				delay: 2000,
+			},
 			breakpoints: {
 				375: {
 					slidesPerView: 1
