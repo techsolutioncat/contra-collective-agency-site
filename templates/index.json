@@ -2,39 +2,402 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+        "heading": "<p>We are <strong>eCommerce  & Integration Development Experts<\/strong><\/p>",
+        "description": "We specialize in custom software development including: Shopify Plus, Sales Force Commerce Cloud, Headless E-Commerce, Netsuite, Quickbooks, 3PL’s and more.",
+        "use_custom_description_color": true,
+        "description_color": "#e0e0e0",
+        "button_link": "shopify:\/\/pages\/contact",
+        "button_label": "Let's Talk",
+        "image": "shopify:\/\/shop_images\/hero-right_7a301fc4-14d4-4dfe-8222-ad93ad6f4fb2.png"
+      }
     },
     "custom_image_with_text": {
       "type": "custom-image-with-text",
-      "settings": {}
+      "settings": {
+        "heading": "Who Are We?",
+        "subtitle": "We are your eCommerce partners",
+        "description": "We are Contra Collective. Our team of expert developers, digital strategists, designers, and creatives are experts at innovating and building the applications, backend processes, and digital solutions you need to scale and flourish.",
+        "image": "shopify:\/\/shop_images\/sigmund-Zs1zHhHBG8g-unsplash_3-1.png",
+        "mob_image": "shopify:\/\/shop_images\/mob.png"
+      }
     },
     "approach": {
       "type": "approach",
+      "blocks": {
+        "499d3fab-0433-421d-9994-fe7c010f994b": {
+          "type": "our_approach",
+          "settings": {
+            "heading": "Our Approach",
+            "image": "shopify:\/\/shop_images\/vs.png",
+            "text1": "Nimble, agile teams.",
+            "text2": "Strategic, targeted solutions.",
+            "text3": "MVP development.",
+            "text4": "Direct communication and proactive management.",
+            "text5": "Direct communication and proactive management."
+          }
+        },
+        "3331f27b-978b-4fc1-a541-610d0e5d565b": {
+          "type": "agency_models",
+          "settings": {
+            "heading": "Most Agency Models",
+            "text1": "Over zealous project management fees.",
+            "text2": "Long-term vested interest or monthly obligations.",
+            "text3": "Project delays and cost overruns.",
+            "text4": "“Waterfall” approach to software development.",
+            "text5": ""
+          }
+        },
+        "9701e3d3-16e1-4d22-bdf9-e96847729e28": {
+          "type": "different_approach",
+          "settings": {
+            "heading": "A Different Approach",
+            "description": "<p>Oftentimes, you have to take a step back and see the big picture to determine the road forward.<\/p><p>At Contra Collective, we come in detached and solve problems with “bird's eye” intelligence and innovative “deep dive” engineering.<\/p>",
+            "button_link": "#",
+            "button_label": "Let’s Build My Product"
+          }
+        }
+      },
+      "block_order": [
+        "499d3fab-0433-421d-9994-fe7c010f994b",
+        "3331f27b-978b-4fc1-a541-610d0e5d565b",
+        "9701e3d3-16e1-4d22-bdf9-e96847729e28"
+      ],
       "settings": {}
     },
     "brands": {
       "type": "brands",
-      "settings": {}
+      "blocks": {
+        "65a5e5d0-b839-40ae-a7bd-8c6e0ae015fa": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/g-_Drybar_Logo.png"
+          }
+        },
+        "2506b900-bac0-45d1-bf9a-5029aadb7157": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector.png"
+          }
+        },
+        "95c52d8f-9f7b-4042-8be2-fa78adad795f": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Conair.png"
+          }
+        },
+        "57d2a597-9e9b-4713-84cf-ae3b21643ca8": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3978.png"
+          }
+        },
+        "d59da6c4-4a86-4aa9-bc4b-45472a88fbb0": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3972.png"
+          }
+        },
+        "5b704841-2a58-4ab5-b3f2-f1e711337b5d": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-beautiful.png"
+          }
+        },
+        "c7498bfa-7425-4c51-be65-e90c1993a9e3": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_1.png"
+          }
+        },
+        "42282a87-2d28-4cab-aeca-e05338d46bd5": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3975.png"
+          }
+        },
+        "a320f3ea-134b-4ea7-9602-3e2acaad8d5f": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3979.png"
+          }
+        },
+        "e2ab1d1b-9ba3-4512-ba4b-47de44ec213e": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3970.png"
+          }
+        },
+        "2331d134-f4b4-4545-a998-556849f1e3dd": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3971.png"
+          }
+        },
+        "99a5134f-17a6-4031-898b-ad50db046758": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ami-logo_1.png"
+          }
+        },
+        "963de7bd-ed1f-4c64-95ff-b23e2da6912a": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3973.png"
+          }
+        },
+        "c3d33083-ac57-4ebb-bd18-5730551d9bac": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3974.png"
+          }
+        },
+        "a0514ba6-f1ef-4c48-99a1-984eaf5c9ba7": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_345.png"
+          }
+        }
+      },
+      "block_order": [
+        "65a5e5d0-b839-40ae-a7bd-8c6e0ae015fa",
+        "2506b900-bac0-45d1-bf9a-5029aadb7157",
+        "95c52d8f-9f7b-4042-8be2-fa78adad795f",
+        "57d2a597-9e9b-4713-84cf-ae3b21643ca8",
+        "d59da6c4-4a86-4aa9-bc4b-45472a88fbb0",
+        "5b704841-2a58-4ab5-b3f2-f1e711337b5d",
+        "c7498bfa-7425-4c51-be65-e90c1993a9e3",
+        "42282a87-2d28-4cab-aeca-e05338d46bd5",
+        "a320f3ea-134b-4ea7-9602-3e2acaad8d5f",
+        "e2ab1d1b-9ba3-4512-ba4b-47de44ec213e",
+        "2331d134-f4b4-4545-a998-556849f1e3dd",
+        "99a5134f-17a6-4031-898b-ad50db046758",
+        "963de7bd-ed1f-4c64-95ff-b23e2da6912a",
+        "c3d33083-ac57-4ebb-bd18-5730551d9bac",
+        "a0514ba6-f1ef-4c48-99a1-984eaf5c9ba7"
+      ],
+      "settings": {
+        "heading": "Brands we've worked with",
+        "description": "Contra Collective is a team of developers and creatives, who innovate and develop cross-device, cross-platform software for SMEs and Fortune 500 companies.",
+        "top_image": "shopify:\/\/shop_images\/brands_top_aac4076b-31e7-4c3f-b3d5-c0670f8c653e.png",
+        "left_image": "shopify:\/\/shop_images\/brands_left.png"
+      }
     },
     "what_we_do": {
       "type": "what_we_do",
-      "settings": {}
+      "blocks": {
+        "d5b4a15a-5670-42c6-85d8-381e29721dc8": {
+          "type": "heading",
+          "settings": {
+            "heading": "What we Do"
+          }
+        },
+        "49d28587-5eae-4569-a410-286d94a343e6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re a startup or established brand, we develop the tools you need to transform your operational efficiency and reach your target audience.<\/p><p>That way, you can focus on strategic projects and remain competitive in today’s marketplace.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5b4a15a-5670-42c6-85d8-381e29721dc8",
+        "49d28587-5eae-4569-a410-286d94a343e6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/what_we_do_right.png"
+      }
     },
     "service": {
       "type": "service",
+      "blocks": {
+        "b1f6af9f-9ae8-4872-a4d0-f5b2a120f056": {
+          "type": "service_item",
+          "settings": {
+            "heading": "Sales Force Commerce Cloud",
+            "description": "We develop Sales Force Commerce Cloud E-Commerce websites with a speciality in SFRA.",
+            "icon": "shopify:\/\/shop_images\/Group_236.png",
+            "number_image": "shopify:\/\/shop_images\/01.png"
+          }
+        },
+        "c151b1c0-4321-44e6-9d82-19b315461e3b": {
+          "type": "service_item",
+          "settings": {
+            "heading": "Custom Shopify Themes & Apps",
+            "description": "Increase revenue and improve conversions with streamlined eCommerce solutions.",
+            "icon": "shopify:\/\/shop_images\/Group_235.png",
+            "number_image": "shopify:\/\/shop_images\/02.png"
+          }
+        },
+        "ac9449cf-ca20-489d-a363-5a329f629c00": {
+          "type": "service_item",
+          "settings": {
+            "heading": "Beautiful Headless Web Applications",
+            "description": "We build custom web apps, from tailored dashboards to headless eCommerce experiences.",
+            "icon": "shopify:\/\/shop_images\/Compound_Path.png",
+            "number_image": "shopify:\/\/shop_images\/03.png"
+          }
+        },
+        "e7591056-b3d9-47c5-b84e-b1c29d796240": {
+          "type": "service_item",
+          "settings": {
+            "heading": "ERP Implementations & Connectors",
+            "description": "We implement customizations, integrations, and workflows to maximize your efficiency.",
+            "icon": "shopify:\/\/shop_images\/Group_232.png",
+            "number_image": "shopify:\/\/shop_images\/04.png"
+          }
+        },
+        "d71c8077-33f2-4f8d-8b36-8f67c59d0bf1": {
+          "type": "service_item",
+          "settings": {
+            "heading": "UI\/UX Design",
+            "description": "We build custom web apps, from tailored dashboards to headless eCommerce experiences.",
+            "icon": "shopify:\/\/shop_images\/Group_231.png",
+            "number_image": "shopify:\/\/shop_images\/05.png"
+          }
+        },
+        "e3ffcfab-0abf-42be-94bc-17a99df09b32": {
+          "type": "service_item",
+          "settings": {
+            "heading": "Storefront Migrations",
+            "description": "Get setup and running no matter your eCommerce storefront of choice.",
+            "icon": "shopify:\/\/shop_images\/Group_233.png",
+            "number_image": "shopify:\/\/shop_images\/06.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1f6af9f-9ae8-4872-a4d0-f5b2a120f056",
+        "c151b1c0-4321-44e6-9d82-19b315461e3b",
+        "ac9449cf-ca20-489d-a363-5a329f629c00",
+        "e7591056-b3d9-47c5-b84e-b1c29d796240",
+        "d71c8077-33f2-4f8d-8b36-8f67c59d0bf1",
+        "e3ffcfab-0abf-42be-94bc-17a99df09b32"
+      ],
       "settings": {}
     },
     "our_result": {
       "type": "our_result",
-      "settings": {}
+      "blocks": {
+        "75eaafbf-535a-4266-a8c9-0edfa4bee5f4": {
+          "type": "item_grid",
+          "settings": {
+            "percent": "+ 18%",
+            "description": "ORDERS PLACED PER MONTH"
+          }
+        },
+        "0d803d1d-a773-4b13-8168-b335de300ebf": {
+          "type": "item_grid",
+          "settings": {
+            "percent": "+ 30%",
+            "description": "WEB TRAFFIC INCREASE"
+          }
+        },
+        "e0687c95-0cb7-4629-95c7-14e45a41d379": {
+          "type": "item_grid",
+          "settings": {
+            "percent": "789,195",
+            "description": "LINES OF CODE WRITTEN"
+          }
+        }
+      },
+      "block_order": [
+        "75eaafbf-535a-4266-a8c9-0edfa4bee5f4",
+        "0d803d1d-a773-4b13-8168-b335de300ebf",
+        "e0687c95-0cb7-4629-95c7-14e45a41d379"
+      ],
+      "settings": {
+        "heading": "OUR RESULTS",
+        "subtitle": "Speed and Quality don’t have to be separate."
+      }
     },
     "our_partners": {
       "type": "our_partners",
-      "settings": {}
+      "blocks": {
+        "5188060f-63e7-4c00-a2e1-29dc3492ea2d": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Shopify-Logo.png"
+          }
+        },
+        "c3c6c719-e432-4964-b5c5-18af7c985545": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/contentful-logo.png"
+          }
+        },
+        "f560f1b1-3aa9-4385-bbc7-e29f4ccd3244": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kindpng_3986743_1.png"
+          }
+        },
+        "f0b155ed-912b-4dbd-b8b0-8ef808743531": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/heap-logo.png"
+          }
+        },
+        "fa553571-9913-4290-8158-d446b22119e9": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2560px-AmazonWebservices_Logo_1.png"
+          }
+        },
+        "197f5d0d-8d7a-4b3b-bde2-c7061f160f57": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5842a8e9a6515b1e0ad75b01.png"
+          }
+        },
+        "adaa2311-bdfe-421c-9f84-77d8be1305f0": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Docebo_logo_2010.png"
+          }
+        },
+        "ac5b2752-3800-450e-b1d4-be67a3ddc24a": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BigCommerce_Logo.png"
+          }
+        },
+        "68f9d50c-fd5c-40e2-afdf-771a278b6ec6": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Webscale_Logo_1.png"
+          }
+        },
+        "443bcece-3d0f-4a48-80d4-b14a1af2cd98": {
+          "type": "partner_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salesforce_commerce_cloud_logo_freelogovectors_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "5188060f-63e7-4c00-a2e1-29dc3492ea2d",
+        "c3c6c719-e432-4964-b5c5-18af7c985545",
+        "f560f1b1-3aa9-4385-bbc7-e29f4ccd3244",
+        "f0b155ed-912b-4dbd-b8b0-8ef808743531",
+        "fa553571-9913-4290-8158-d446b22119e9",
+        "197f5d0d-8d7a-4b3b-bde2-c7061f160f57",
+        "adaa2311-bdfe-421c-9f84-77d8be1305f0",
+        "ac5b2752-3800-450e-b1d4-be67a3ddc24a",
+        "68f9d50c-fd5c-40e2-afdf-771a278b6ec6",
+        "443bcece-3d0f-4a48-80d4-b14a1af2cd98"
+      ],
+      "settings": {
+        "heading": "Our  Partners",
+        "description": "<p>Contra Collective has partnerships with some of the web’s most popular service providers.  <br\/><br\/>We work closely with our partners to deliever high quality products.<\/p>",
+        "top_image": "shopify:\/\/shop_images\/Polygon.png"
+      }
     },
     "contact": {
       "type": "contact",
-      "settings": {}
+      "settings": {
+        "heading": "Want To Chat?",
+        "text": "Let’s make your business better.\nSubmit the form to get in touch with us."
+      }
     }
   },
   "order": [

@@ -191,7 +191,19 @@
                             </div>
                           </details>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                        {% comment %}add "/" to anchor links down the home page, when not on the home page{% endcomment %}
+                        {% assign newLink = link.url %}
+                        {% assign firstChar = link.url | slice: 0 %}
+                        {% assign secondChar = link.url | slice: 1 %}
+                        {% if template.name != 'index' %}
+                          {% if firstChar == '#' %}
+                            {% assign newLink = link.url | prepend: '/' %}
+                          {% endif %}
+                        {% endif %}
+                        <!-- firstChar: {{ firstChar }} -->
+                        <!-- template: {{ template.name }} -->
+                        {% comment %}add class to anchor links down the page to close mobile menu{% endcomment %}
+                          <a href="{{ newLink }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %} {% if firstChar == '#' and template.name == 'index' and secondChar != blank %}close-menu{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape }}
                           </a>
                         {%- endif -%}
@@ -374,15 +386,35 @@
     {%- endif -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
+            
+            {%- if section.settings.logo2 != blank -%}
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
             {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-              class: 'header__heading-logo',
+              class: 'header__heading-logo logo-main',
               widths: '50, 100, 150, 200, 250, 300, 400, 500',
               height: logo_height,
               width: section.settings.logo_width,
               alt: logo_alt
             }}
+            {{ section.settings.logo2 | image_url: width: section.settings.width | image_tag:
+              class: 'header__heading-logo logo-scroll',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              height: logo_height,
+              width: section.settings.logo_width,
+              alt: logo_alt
+            }}
+            {% else %}
+            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+            {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+            {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+              class: 'header__heading-logo logo-main',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              height: logo_height,
+              width: section.settings.logo_width,
+              alt: logo_alt
+            }}
+            {% endif %}
           {%- else -%}
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
@@ -434,7 +466,18 @@
                     </details>
                   </header-menu>
                 {%- else -%}
-                  <a href="{{ link.url }}" class="menu-item-link {% if link.title == 'get in touch' %}active{% endif %} font-12 fw-700 ft-uppercase color-white header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                  {% comment %}add "/" to anchor links down the home page, when not on the home page{% endcomment %}
+                  {% assign newLink = link.url %}
+                  {% assign firstChar = link.url | slice: 0 %}
+                  {% if template.name != 'index' %}
+                    {% if firstChar == '#' %}
+                      {% assign newLink = link.url | prepend: '/' %}
+                    {% endif %}
+                  {% endif %}
+                        <!-- firstChar: {{ firstChar }} -->
+                        <!-- template: {{ template.name }} -->
+
+                  <a href="{{ newLink }}" class="menu-item-link {% if link.title == 'get in touch' %}active{% endif %} font-12 fw-700 ft-uppercase color-white header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                     <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                   </a>
                 {%- endif -%}
@@ -601,6 +644,7 @@
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
+
 {%- if settings.cart_type == "notification" -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 {%- endif -%}
@@ -690,7 +734,10 @@
 
     closeSearchModal() {
       this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-      this.searchModal.close(false);
+      if (this.searchModal) {
+        this.searchModal.close(false);
+      }
+      
     }
   }
 
@@ -740,7 +787,7 @@
 {% schema %}
 {
   "name": "t:sections.header.name",
-  "class": "section-header",
+  "class": "section-header always-open",
   "settings": [
     {
       "type": "select",
@@ -774,6 +821,11 @@
       "type": "image_picker",
       "id": "logo",
       "label": "t:sections.header.settings.logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo2",
+      "label": "Logo on scroll"
     },
     {
       "type": "range",

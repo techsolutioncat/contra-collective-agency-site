@@ -1,9 +1,9 @@
 <div class="top-image">
     {% if section.settings.top_image != blank %}
-        <img src="{{ section.settings.top_image | image_url: width: 700 }}" alt="Original Image">
+        <img src="{{ section.settings.top_image | image_url: width: 700 }}" loading alt="Original Image">
     {% endif %}
 </div>
-<div class="page-width">
+<div class="page-width brands-header">
     <div class="main-content">
         <h1 class="title font-46 fw-700 m-0">{{ section.settings.heading }}</h1>
         <p class="description font-22 color-black fw-400 m-0 lh-160">{{ section.settings.description }}</p>
@@ -11,7 +11,7 @@
 </div>
 <div class="left-image">
     {% if section.settings.left_image != blank %}
-        <img src="{{ section.settings.left_image | image_url: width: 700 }}" alt="Original Image">
+        <img src="{{ section.settings.left_image | image_url: width: 700 }}" loading alt="Original Image">
     {% endif %}
 </div>
 <div class="page-width">
@@ -19,7 +19,7 @@
         {%- for block in section.blocks -%}
             {% assign mo = forloop.index0 | modulo: 3 %}
             <div class="brand-item {% if mo == 0 %}row-first{% endif %}" data-id="{{ forloop.index0 }}">
-                <img src="{{ block.settings.image | image_url: width: 300 }}" alt="Original Image">
+                <img src="{{ block.settings.image | image_url: width: 300 }}" loading alt="Original Image">
             </div>
         {% endfor %}
     </div>

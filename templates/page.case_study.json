@@ -2,67 +2,346 @@
   "sections": {
     "banner": {
       "type": "banner_image-with-text",
-      "settings": {}
+      "blocks": {
+        "603f1473-c210-422d-a9b5-603cfa015984": {
+          "type": "bannner-logo-image",
+          "settings": {
+            "banner_logo_image": "shopify:\/\/shop_images\/Fill_2_1.png"
+          }
+        },
+        "ef1fbfab-2d16-41e1-988e-4aae3ceb3735": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet, consectet."
+          }
+        },
+        "09d37081-74a6-4da8-a4f4-3c13b483bbc0": {
+          "type": "description",
+          "settings": {
+            "description": "Nam tincidunt venenatis sollicitudin. Donec orci nisi, iaculis at erat eget, tristique ullamcorper augue sed \nvolutpat sapien eu risus."
+          }
+        }
+      },
+      "block_order": [
+        "603f1473-c210-422d-a9b5-603cfa015984",
+        "ef1fbfab-2d16-41e1-988e-4aae3ceb3735",
+        "09d37081-74a6-4da8-a4f4-3c13b483bbc0"
+      ],
+      "settings": {
+        "main_image": "shopify:\/\/shop_images\/80b03c8a-a8a5-42f1-9183-33515588ad6a-Drybar_1.png",
+        "sub_image": "shopify:\/\/shop_images\/Group_3967.png",
+        "right_image": "shopify:\/\/shop_images\/Untitled-1_4c3cdf27-7bce-4610-a4e2-8eea6a2ff24e.png"
+      }
     },
     "challenge": {
       "type": "challenge",
-      "settings": {}
+      "settings": {
+        "title": "The Challenge",
+        "description": "Vivamus nunc urna, condimentum vitae nisl ut, vulputate pharetra ante. Proin eget sollicitudin diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras blandit sollicitudin dui id condimentum.",
+        "bottom_description": "Donec viverra mauris finibus, vulputate arcu nec,  efficitur justo. Duis porttitor eros dolor."
+      }
     },
     "topic": {
       "type": "topic",
-      "settings": {}
+      "blocks": {
+        "28815556-4c64-400f-8354-845a92a773e8": {
+          "type": "topic_item",
+          "settings": {
+            "topic": "Vivamus nunc urna"
+          }
+        },
+        "85b9db99-71be-4805-ba89-53c32e81b899": {
+          "type": "topic_item",
+          "settings": {
+            "topic": "Aliquam at nibh euismoduet"
+          }
+        },
+        "4fb984e8-1d28-4b4e-9bc6-57ea75a15cc1": {
+          "type": "topic_item",
+          "settings": {
+            "topic": "Fusce fringilla sapien"
+          }
+        },
+        "8855395d-9f13-4e77-8fb7-9313d85f5a47": {
+          "type": "topic_item",
+          "settings": {
+            "topic": "Cras blandit sollicitudin"
+          }
+        },
+        "8c708601-d7ba-4ab2-9efe-9dd9592a2c0b": {
+          "type": "topic_item",
+          "settings": {
+            "topic": "Donec facilisis lacus eros"
+          }
+        },
+        "d7fce2c3-1c6f-4946-9f3b-7cc795e2e6bd": {
+          "type": "topic_item",
+          "settings": {
+            "topic": "Pellentesque eu lorem ipsumed rutrum"
+          }
+        }
+      },
+      "block_order": [
+        "28815556-4c64-400f-8354-845a92a773e8",
+        "85b9db99-71be-4805-ba89-53c32e81b899",
+        "4fb984e8-1d28-4b4e-9bc6-57ea75a15cc1",
+        "8855395d-9f13-4e77-8fb7-9313d85f5a47",
+        "8c708601-d7ba-4ab2-9efe-9dd9592a2c0b",
+        "d7fce2c3-1c6f-4946-9f3b-7cc795e2e6bd"
+      ],
+      "settings": {
+        "title": "Contained  Topics",
+        "description": "Should you read this? Sed vel vestibul umeq. Fusce ac ipsum luctus, tempor ex sed.",
+        "right_image": "shopify:\/\/shop_images\/Group_3842_copy.png"
+      }
     },
     "left_image_with_text": {
       "type": "left_image_with_text",
-      "settings": {}
+      "settings": {
+        "heading": "The Brand",
+        "description": "<p>Vivamus nunc urna, condimentum vitae nisl ut, vulputate pharetra ante. Proin eget sollicitudin diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras blandit sollicitudin dui id condimentum. <br\/><br\/>Nam tincidunt venenatis sollicitudin. Donec orci nisi, iaculis <br\/>at erat eget, tristique ullamcorper augue. Sed volutpat sapien eu risus aliquam, at commodo lectus congue. Etiam noner quam tempor, feugiat mi sed, dapibus arcu. Fusce at libero dolor. In hac habitasse platea dictumst. <\/p>",
+        "left_image": "shopify:\/\/shop_images\/Rectangle_3653.png",
+        "note": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "brand_image": "shopify:\/\/shop_images\/Fill_2_1.png"
+      }
     },
     "class_friendly": {
       "type": "class_friendly",
-      "settings": {}
+      "settings": {
+        "heading": "Class aptent taciti sociosqu ad.",
+        "text1": "Cras dapibus sodales nunc eget fringilla. Donec vel odio ac sem sodales tincidunt nec sit amet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet euismod nisl, et aliquet seron mauris. Nullam venenatis id ipsum nec aliquet. Duis euismod lorem at sapien.",
+        "text2": "Lorem ipsum dolor sit amet, consectet\nadipiscing elit. Nam sit amet euismod nisl, et aliquet seron mauris. Nullam venenatis id ipsum nec aliquet.",
+        "text3": "Orci pellentesque tristique.\nAenean ligula neque neuer, fermentum.",
+        "image1": "shopify:\/\/shop_images\/STYLES_1.png",
+        "image2": "shopify:\/\/shop_images\/Styles_Mobile_1.png",
+        "image3": "shopify:\/\/shop_images\/Untitled-1_273c4f83-ade4-4723-a4fd-d09831378fd5.png"
+      }
+    },
+    "1660801738dd99d27f": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/InShop_Experience_1730_MimosaEdit_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     },
     "text_banner": {
       "type": "text_banner",
-      "settings": {}
+      "settings": {
+        "heading": "In their own words",
+        "description": "Cras dapibus sodales nunc eget fringilla. Donec vel odio ac sem sodales tincidunt nec sitore amet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet euismoda nisl, et aliquet ser mauris. Nullam venenatis id ipsum nec aliquet. Duis euismod lorem sapien duna.\n<br><br>\nNam tincidunt venenatis sollicitudin. Donec orci nisi, iaculis at erat eget, tristique eronias ullamcorper augue. Sed volutpat sapien eu risus aliquam, at commodo ."
+      }
     },
     "customer_experience": {
       "type": "customer_experience",
-      "settings": {}
+      "settings": {
+        "heading": "unifing  the customer  experience",
+        "text1": "Orci pellentesque tristique.\nAenean ligula neque.",
+        "text2": "Cras dapibus vin sodales nunc ege fringilla. Donec vel odio ac sem sodal tincidunt.",
+        "text3": "Lorem ipsum ner dolor sit ametor, consectet.",
+        "text4": "Cras dapibus sodales nunc eget fringilla. Donec vel odio ac sem sodales tincidunt nec sit amet nisi. Lorem ipsum dolor sit amet, consectetur dulaen adipiscing elit. Nam sit amet euismod nisl, etor aliquet seron mauris. Nullam venenatis.",
+        "background": "shopify:\/\/shop_images\/Untitled-1_9bfe9e7c-667c-488e-ae44-6a2795f78e06.png",
+        "left_image": "shopify:\/\/shop_images\/Group_3940.png",
+        "right_image": "shopify:\/\/shop_images\/Group_3937.png",
+        "image_right_bottom": "shopify:\/\/shop_images\/Polygon_51.png"
+      }
     },
     "location": {
       "type": "location",
-      "settings": {}
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_3944.png",
+        "left_image": "shopify:\/\/shop_images\/2.png"
+      }
     },
     "product_about": {
       "type": "product_about",
-      "settings": {}
+      "settings": {
+        "heading": "Duis mattiseno neque quis iaculis.",
+        "text1": "<p>Cras dapibus sodales nunc eget fringilla. Donec vel odio ac sem sodales tincidunt nec sit amet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet euismod nisl, et aliquet seron mauris. Nullam venenatis id ipsum nec aliquet. Duis euismod lorem at sapien.<\/p>",
+        "text2": "<p>Lorem ipsum dolor sit amet, consectet<br\/>adipiscing elit. Nam sit amet euismod nisl, et aliquet seron mauris. Nullam venenatis id ipsum nec aliquet. <\/p>",
+        "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "name": "Lorem ipsum,",
+        "job": "CEO Genoem",
+        "right_image": "shopify:\/\/shop_images\/My_Account_Desktop_-_Account_Information_1.png",
+        "left_image": "shopify:\/\/shop_images\/drybar_cat_2_1.png",
+        "banner_image": "shopify:\/\/shop_images\/16021867452.png"
+      }
     },
     "results": {
       "type": "results",
-      "settings": {}
+      "settings": {
+        "heading": "Results",
+        "subtitle": "Orci pellentesque tristique.\nAenean ligula neque.",
+        "text1": "Aenean pulvinar nunc suscipit lectus egestas mattis. Nam tincidunt venenatis sollicitudin. Donec orci nisi, iaculis at erat eget, tristique eron ullamcorper augue. Sed volutpat sapien eu risus aliquam, at commodo lectus congue. Etiam non quam tempor, feugiat mi sed, dapibus arcu. Fusce at libero dolor. In hac habitasse platea dictumst. Quisque at semper nisl.",
+        "text2": "Nullam semper velit eget efficitur convallis verona Quisque dui sem, mollis quis purus non, mollis ima lacinia ante. Vestibulum rutrum, sapien in lobortis convallis, magna nulla scelerisque tortor.",
+        "image": "shopify:\/\/shop_images\/Time_1.png"
+      }
     },
     "own_words": {
       "type": "own_words",
-      "settings": {}
+      "settings": {
+        "heading": "In their own words",
+        "description": "Cras dapibus sodales nunc eget fringilla. Donec vel odio ac sem sodales tincidunt nec sitore amet nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet euismoda nisl, et aliquet ser mauris. Nullam venenatis id ipsum nec aliquet. Duis euismod lorem sapien duna.",
+        "right_image": "shopify:\/\/shop_images\/Group_3952.png",
+        "right_gradient_image": "shopify:\/\/shop_images\/Polygon_31.png",
+        "bottom_text1": "Lorem ipsum,",
+        "bottom_text2": "CEO Genoem"
+      }
     },
     "image_bar": {
       "type": "image_bar",
-      "settings": {}
+      "settings": {
+        "text": "Lorem ipsum dolor amet",
+        "image": "shopify:\/\/shop_images\/12.png"
+      }
     },
     "glance": {
       "type": "glance",
-      "settings": {}
+      "blocks": {
+        "16b630b2-8092-4cb4-a534-e6283396bbf4": {
+          "type": "item_grid",
+          "settings": {
+            "percent": "+327%",
+            "description": "Nam tincidunt venenatis sollicitudin. Donec orci nisi."
+          }
+        },
+        "b6a5e2e6-e2a1-443b-841d-357e8164778e": {
+          "type": "item_grid",
+          "settings": {
+            "percent": "76%",
+            "description": "Iaculis at erat eget, tristique ullamcorper vigor augue."
+          }
+        },
+        "7ebf2a75-c723-4837-a7a7-d3a12827bb37": {
+          "type": "item_grid",
+          "settings": {
+            "percent": "-21%",
+            "description": "Nullam sollicitudin, odiose gravida fermentum igula."
+          }
+        }
+      },
+      "block_order": [
+        "16b630b2-8092-4cb4-a534-e6283396bbf4",
+        "b6a5e2e6-e2a1-443b-841d-357e8164778e",
+        "7ebf2a75-c723-4837-a7a7-d3a12827bb37"
+      ],
+      "settings": {
+        "heading": "At A Glance",
+        "subtitle": ""
+      }
     },
     "contact_us": {
       "type": "contact-us",
-      "settings": {}
+      "settings": {
+        "description": "Vivamus nunc urna, condimentum vitae nisl ut, vulputate pharetra ante. Proin eget sollicitudin diam. Class aptent taciti sociosqu ad litora torquent.",
+        "button_label": "Contact Us",
+        "button_link": "#",
+        "left_image": "shopify:\/\/shop_images\/Group_3954.png",
+        "gradient_image": "shopify:\/\/shop_images\/Polygon_52.png"
+      }
     },
     "summary": {
       "type": "summary",
+      "blocks": {
+        "47d44c89-d9ce-4872-88e7-ca17b9e10d3d": {
+          "type": "summary",
+          "settings": {
+            "heading": "Summary",
+            "text1": "Nullam sollicitudin, odio sed gravida fermentum, ligula ante luctus erat, vitae tincidunt tortor odio eu massa. Vivamus placerat eros tempus metus.",
+            "text2": "am tincidunt venenatis sollicitudin. Donec orci nisi, iaculis at erat eget, tristique vigu ullamcorper vina augue. Sed volutpat sapien eu risus aliquam, ator commodo lectusera congue. Etiam non quamer tempor, feugiat mi sed, dapibus arcu. Fusce atos libero dolor. In hac habitasse platea."
+          }
+        },
+        "7d7f1e14-b87f-473d-ac6d-f7c3c5af33ed": {
+          "type": "services",
+          "settings": {
+            "heading": "Services",
+            "text1": "Tincidunt tellus non",
+            "text2": "Eros tempus metuson",
+            "text3": "Isus aliquam atoren siga",
+            "text4": "Hac habitasse platea sin",
+            "text5": "Odio sed gravida ferment",
+            "text6": "Donec orci nisi iaculis",
+            "text7": "Suspendisse molestie mas",
+            "text8": "Interdum risus quis suna"
+          }
+        },
+        "a6e09684-9062-48cd-aea2-b72d9575ed97": {
+          "type": "technology_solutions",
+          "settings": {
+            "heading": "Technology Solutions",
+            "text1": "Nam tincidunt venenatis sollicit udinonec orci nisi iaculis atera",
+            "text2": "Donec ac libero finibus interdum risus quis eleifend minoras",
+            "text3": "Donec ac libero finibus interdum",
+            "text4": "Nullam sollicitudin odio vinam",
+            "text5": "Nam tincidunt venenatis sollicit udinonec orci nisi iaculis atera",
+            "text6": "Sollicitudin odio vinamer numa"
+          }
+        }
+      },
+      "block_order": [
+        "47d44c89-d9ce-4872-88e7-ca17b9e10d3d",
+        "7d7f1e14-b87f-473d-ac6d-f7c3c5af33ed",
+        "a6e09684-9062-48cd-aea2-b72d9575ed97"
+      ],
       "settings": {}
     },
     "similar_projects": {
       "type": "similar_projects",
-      "settings": {}
+      "blocks": {
+        "22772a93-8e7b-4ca2-8762-b3001d82b53a": {
+          "type": "slide",
+          "settings": {
+            "title": "#MyDentity",
+            "subtitle": "Design\/ Development",
+            "image": "shopify:\/\/shop_images\/Rectangle_7.8.png",
+            "detail_link": "#"
+          }
+        },
+        "787a9434-1862-4b78-afc0-2326446174f4": {
+          "type": "slide",
+          "settings": {
+            "title": "C & G Store",
+            "subtitle": "Design\/ Development",
+            "image": "shopify:\/\/shop_images\/Rectangle_7.3.png",
+            "detail_link": "#"
+          }
+        },
+        "d3f8d857-af4b-4454-8c12-9d6c5dab426e": {
+          "type": "slide",
+          "settings": {
+            "title": "UMAC Global",
+            "subtitle": "Design\/ Development",
+            "image": "shopify:\/\/shop_images\/Rectangle_7.8.png",
+            "detail_link": "#"
+          }
+        },
+        "a3ccde78-7a40-48b1-9337-7f66a2271e93": {
+          "type": "slide",
+          "settings": {
+            "title": "C & G Store",
+            "subtitle": "Design\/ Development",
+            "image": "shopify:\/\/shop_images\/Rectangle_7.8.png",
+            "detail_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "22772a93-8e7b-4ca2-8762-b3001d82b53a",
+        "787a9434-1862-4b78-afc0-2326446174f4",
+        "d3f8d857-af4b-4454-8c12-9d6c5dab426e",
+        "a3ccde78-7a40-48b1-9337-7f66a2271e93"
+      ],
+      "settings": {
+        "heading": "Case Studies Of Similar projects"
+      }
     }
   },
   "order": [
@@ -71,6 +350,7 @@
     "topic",
     "left_image_with_text",
     "class_friendly",
+    "1660801738dd99d27f",
     "text_banner",
     "customer_experience",
     "location",

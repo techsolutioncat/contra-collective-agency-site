@@ -15,7 +15,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1300,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -95,6 +95,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "currency_code_enabled": true,
     "cart_type": "notification",
     "show_vendor": false,
@@ -102,34 +103,23 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "background-1",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "announcement-bar-0"
-        ],
         "settings": {}
       },
       "header": {
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "{{ shop.brand.logo }}",
-          "logo_width": 90,
+          "logo": "shopify:\/\/shop_images\/Logo.png",
+          "logo2": "shopify:\/\/shop_images\/logo-cc-on-white.png",
+          "logo_width": 155,
           "logo_position": "middle-left",
           "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
           "show_line_separator": true,
           "enable_sticky_header": true,
           "margin_bottom": 0,
-          "padding_top": 20,
-          "padding_bottom": 20
+          "padding_top": 29,
+          "padding_bottom": 29
         }
       },
       "footer": {
@@ -138,19 +128,39 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "menu",
+              "menu": "footer",
+              "facebook": "",
+              "instagram": ""
             }
           },
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "get in touch",
+              "menu": "get-in-touch",
+              "facebook": "https:\/\/www.facebook.com",
+              "instagram": "https:\/\/www.instagram.com"
+            }
+          },
+          "75ccf6e6-d08f-460b-b62e-ac82c36c34d8": {
+            "type": "text",
+            "settings": {
+              "heading": "",
+              "subtext": ""
+            }
+          },
+          "5355b8bf-99a5-424d-b455-e8a82ea8c16c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Header.png",
+              "image_width": 100,
+              "alignment": "center"
             }
           },
           "footer-2": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "heading": "Our mission",
               "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
@@ -160,19 +170,22 @@
         "block_order": [
           "footer-0",
           "footer-1",
+          "75ccf6e6-d08f-460b-b62e-ac82c36c34d8",
+          "5355b8bf-99a5-424d-b455-e8a82ea8c16c",
           "footer-2"
         ],
         "settings": {
-          "color_scheme": "background-1",
-          "newsletter_enable": true,
+          "footer_image": "shopify:\/\/shop_images\/Group315.png",
+          "color_scheme": "inverse",
+          "newsletter_enable": false,
           "newsletter_heading": "Subscribe to our emails",
-          "show_social": true,
+          "show_social": false,
           "enable_country_selector": false,
           "enable_language_selector": false,
-          "payment_enable": true,
-          "margin_top": 48,
-          "padding_top": 36,
-          "padding_bottom": 36
+          "payment_enable": false,
+          "margin_top": 0,
+          "padding_top": 52,
+          "padding_bottom": 48
         }
       },
       "main-password-header": {
@@ -189,7 +202,8 @@
           "color_scheme": "background-1"
         }
       }
-    }
+    },
+    "content_for_index": []
   },
   "presets": {
     "Default": {

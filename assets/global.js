@@ -299,6 +299,7 @@ class MenuDrawer extends HTMLElement {
   bindEvents() {
     this.querySelectorAll('summary').forEach(summary => summary.addEventListener('click', this.onSummaryClick.bind(this)));
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
+    this.querySelectorAll('.close-menu').forEach(item => item.addEventListener('click', this.onCloseButtonClick.bind(this)));
   }
 
   onKeyUp(event) {
@@ -368,6 +369,10 @@ class MenuDrawer extends HTMLElement {
 
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
+    const theLink = event.target.closest('a');
+    if (theLink && theLink.classList.contains('close-menu')) {
+      document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
+    }
     this.closeSubmenu(detailsElement);
   }
 

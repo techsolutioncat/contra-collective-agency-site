@@ -2197,6 +2197,7 @@ input[type='checkbox'] {
   z-index: 3;
 }
 
+.section-header.always-open, 
 .shopify-section-header-sticky {
   position: sticky;
   top: 0;
@@ -2205,7 +2206,7 @@ input[type='checkbox'] {
 .shopify-section-header-hidden {
   transform: translateY(-100%);
 }
-
+.always-open.shopify-section-header-hidden, 
 .shopify-section-header-hidden.menu-open {
   transform: translateY(0);
 }

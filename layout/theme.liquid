@@ -29,9 +29,7 @@
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'jquery_min.js' | asset_url }}"></script>
-    <script src="{{ 'custom.js' | asset_url }}"></script>
+
     {{ content_for_header }}
 
     {%- liquid
@@ -208,11 +206,7 @@
     {%- if settings.predictive_search_enabled -%}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
-      
-    <!-- Include plugin scripts -->
-    <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
-    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
-    <!-- Include plugin scripts -->
+    
 
     {{ 'common.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
@@ -282,5 +276,20 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'jquery_min.js' | asset_url }}"></script>
+    <script src="{{ 'custom.js' | asset_url }}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5EYXNMH5D"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W5EYXNMH5D');
+  </script>
+    <!-- Include plugin scripts -->
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+    <!-- Include plugin scripts -->
   </body>
 </html>

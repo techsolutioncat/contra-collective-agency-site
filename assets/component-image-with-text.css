@@ -2,15 +2,20 @@
   margin-bottom: 0;
 }
 
+
+
 .image-with-text .grid__item {
   position: relative;
 }
+
+.image-fix {margin-top: 100px;}
 
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse {
     flex-direction: row-reverse;
   }
 }
+
 
 .image-with-text__media {
   min-height: 100%;

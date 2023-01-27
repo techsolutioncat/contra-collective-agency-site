@@ -3,11 +3,11 @@
         <div class="text-box w-50">
             <h1 class="title font-48 fw-700 m-0 color-black">{{ section.settings.heading }}</h1>
             <h2 class="subtitle font-32 fw-300 m-0 color-black">{{ section.settings.subtitle }}</h2>
-            <p class="description font-22 fw-400 m-0 color-black">{{ section.settings.description }}</p>
+            <p class="description font-17 fw-400 m-0 color-black">{{ section.settings.description }}</p>
         </div>
         <div class="image-part w-50">
             {% if section.settings.image != blank %}
-                <img class="desktop-image" src="{{ section.settings.image | image_url: width: 700 }}" alt="Original Image">
+                <img class="desktop-image image-fix" src="{{ section.settings.image | image_url: width: 450 }}" alt="Original Image">
             {% endif %}
             {% if section.settings.mob_image != blank %}
                 <img class="mobile-image" src="{{ section.settings.mob_image | image_url: width: 700 }}" alt="Original Image">
