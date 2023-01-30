@@ -10,7 +10,7 @@
 
 .article-template__hero-container {
   max-width: 130rem;
-  margin: 0 auto;
+  margin: -180px auto 0px;
 }
 
 .article-template__hero-small {
@@ -74,7 +74,8 @@
 }
 
 .article-template__link {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-size: 13px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -96,8 +96,22 @@
     color: #000;
     border: 2px solid #EC772F;
 }
+#shopify-section-{{ section.id }} .more-articles {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#shopify-section-{{ section.id }} .more-articles a.btn_more-articles {
+    background: #EC772F;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    font-size: 17.5px;
+    font-weight: 600;
+    padding: 22px 32px;
+    text-decoration: none;
+}
 @media (max-width: 1100px) {
-    #shopify-section-template--16654533591252__main .blog-boday .article .article-block {
+    #shopify-section-{{ section.id }} .blog-boday .article .article-block {
         width: calc(50% - 30px);
     }
     #shopify-section-{{ section.id }} .blog-boday .article .article-block .article-image img {
@@ -105,7 +119,7 @@
     }
 }
 @media (max-width: 700px) {
-    #shopify-section-template--16654533591252__main .blog-boday .article .article-block {
+    #shopify-section-{{ section.id }} .blog-boday .article .article-block {
         width: 100%;
     }
 }
@@ -118,7 +132,7 @@
                 <img src="{{ section.settings.image | image_url: width: 2000 }}">
             {% endif %}
             
-            {% if section.settings.side_imag != blank %}
+            {% if section.settings.heading != blank %}
                 <div class="blog-title page-width text-align_{{ section.settings.text_align }}">
                     <h2 class="heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
                 </div>
@@ -159,6 +173,12 @@
                 {% endfor %}
             {% endif %}
         </div>
+
+        {% if section.blocks.size > section.settings.article_count %}
+            <div class="more-articles page-width">
+                <a href="Javascript:;" class="btn_more-articles">More Articles</a>
+            </div>
+        {% endif %}
     </div>
 </div>
 

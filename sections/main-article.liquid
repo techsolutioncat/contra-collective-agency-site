@@ -1,6 +1,38 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+#shopify-section-{{ section.id }} .article-hero.H-large { height: 520px; }
+#shopify-section-{{ section.id }} .article-hero.H-medium { height: 350px; }
+#shopify-section-{{ section.id }} .article-hero.H-small { height: 255px; }
+#shopify-section-{{ section.id }} .article-header { margin-top: 0px; }
+#shopify-section-{{ section.id }} .article-hero img { width: 100%; height: 100%; object-fit: cover; }
+#shopify-section-{{ section.id }} .article-header { position: relative; }
+#shopify-section-{{ section.id }} .article-header .side-image { position: absolute; top: 0; right: 0; max-width: 500px; }
+#shopify-section-{{ section.id }} .article-header .side-image img { width: 100%; object-fit: cover; }
+#shopify-section-{{ section.id }} .article-template__hero-container > .media { background: none; }
+#shopify-section-{{ section.id }} .article-template__title { font-weight: bold; }
+.caption-with-letter-spacing.circle-divider { font-size: 13px; color: #B0B0B0; border-right: 1px solid #B0B0B0; }
+.text-author { font-size: 13px; color: #B0B0B0; margin-left: 20px; }
+.caption-with-letter-spacing .name { font-size: 13px; color: #000; }
+.article-template__back { display: flex; }
+@media (max-width: 768px ) {
+  #shopify-section-{{ section.id }} .article-header .side-image { max-width: 220px; }
+}
+{%- endstyle -%}
+
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+      <div class="article-hero H-{{ section.settings.H_hero }}">
+          {% if section.settings.image != blank %}
+              <img src="{{ section.settings.image | image_url: width: 2000 }}">
+          {% endif %}
+      </div>
+      {% if section.settings.side_imag != blank %}
+          <div class="side-image">
+              <img src="{{ section.settings.side_imag | image_url: width: 500 }}">
+          </div>
+      {% endif %}
+  </div>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -34,13 +66,13 @@
 
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
-            <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+            <h1 class="article-template__title {{ block.settings.title_size }}" itemprop="headline">{{ article.title | escape }}</h1>
             {%- if block.settings.blog_show_date -%}
               <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
             {%- if block.settings.blog_show_author -%}
               <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="name">{{ article.author }}</span>
+                <span class="text-author">AUTHOR: </span><span class="name" itemprop="name">{{ article.author }}</span>
               </span>
             {%- endif -%}
           </header>
@@ -92,7 +124,7 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="article-template__back element-margin-top center">
+  <div class="article-template__back element-margin-top center page-width page-width--narrow">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
       <span class="icon-wrap">{% render 'icon-arrow' %}</span>
       {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
@@ -344,6 +376,26 @@
           "id": "blog_show_author",
           "default": false,
           "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "options": [
+              {
+                  "value": "h2",
+                  "label": "t:sections.all.heading_size.options__1.label"
+              },
+              {
+                  "value": "h1",
+                  "label": "t:sections.all.heading_size.options__2.label"
+              },
+              {
+                  "value": "h0",
+                  "label": "t:sections.all.heading_size.options__3.label"
+              }
+          ],
+          "default": "h2",
+          "label": "Article title size"
         }
       ]
     },
@@ -372,6 +424,38 @@
           "content": "t:sections.main-article.blocks.share.settings.title_info.content"
         }
       ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image"
+    },
+    {
+      "type": "select",
+      "id": "H_hero",
+      "options": [
+          {
+              "value": "large",
+              "label": "Large"
+          },
+          {
+              "value": "medium",
+              "label": "Medium"
+          },
+          {
+              "value": "small",
+              "label": "Small"
+          }
+      ],
+      "default": "small",
+      "label": "Hero size"
+    },
+    {
+      "type": "image_picker",
+      "id": "side_imag",
+      "label": "Side image"
     }
   ]
 }

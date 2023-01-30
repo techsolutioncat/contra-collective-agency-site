@@ -58,4 +58,9 @@ $(document).ready(function () {
 			$(this).find('.btn-see-detail').css('display', 'none');
 		});
 	}
+
+	$('.more-articles a.btn_more-articles').on('click', function() {
+		$('.blog-boday .article .article-block.visible-false').css('display', 'block');
+		$(this).css('display', 'none');
+	});
 });
