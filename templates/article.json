@@ -6,20 +6,15 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "image_height": "adapt"
+            "image_height": "medium"
           }
         },
         "title": {
           "type": "title",
           "settings": {
             "blog_show_date": true,
-            "blog_show_author": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "blog_show_author": true,
+            "title_size": "h1"
           }
         },
         "content": {
@@ -30,10 +25,13 @@
       "block_order": [
         "featured_image",
         "title",
-        "share",
         "content"
       ],
-      "settings": {}
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_12_copy.jpg",
+        "H_hero": "small",
+        "side_imag": "shopify:\/\/shop_images\/Group_92.png"
+      }
     }
   },
   "order": [

@@ -2,7 +2,78 @@
   "sections": {
     "main": {
       "type": "main-blog",
-      "settings": {}
+      "blocks": {
+        "6359dba0-060b-4091-b672-5c267d5703b0": {
+          "type": "article",
+          "settings": {
+            "article": "news\/25-best-pro-drawing-apps-and-creative-software-for-2019",
+            "description": "Duis ante orci, molestie vitae vehicula venenatis, nemoe tincidunt ac pede. Integer vulputate sem a nibh rutrum consequat. Nulla quis diam. Duis risus. Nullam faucibus mi quis velit signer. Maecenas ipsum velit consectet"
+          }
+        },
+        "8b27afdd-861a-4d85-b8e3-9216243f0b06": {
+          "type": "article",
+          "settings": {
+            "article": "news\/8-traditional-manufacturers-of-wooden-toys-your-kid-will-love",
+            "description": "Duis ante orci, molestie vitae vehicula venenatis, nemoe tincidunt ac pede. Integer vulputate sem a nibh rutrum consequat. Nulla quis diam. Duis risus. Nullam faucibus mi quis velit signer. Maecenas ipsum velit consectet"
+          }
+        },
+        "67d08230-3e20-49ac-b211-31d9a8bfc43b": {
+          "type": "article",
+          "settings": {
+            "article": "news\/learn-to-manage-social-networks-adverts-2",
+            "description": "Duis ante orci, molestie vitae vehicula venenatis, nemoe tincidunt ac pede. Integer vulputate sem a nibh rutrum consequat. Nulla quis diam. Duis risus. Nullam faucibus mi quis velit signer. Maecenas ipsum velit consectet"
+          }
+        },
+        "25ddf5b3-0d9e-4672-824d-cf584ce05a76": {
+          "type": "article",
+          "settings": {
+            "article": "news\/how-to-become-successful-webdesigner",
+            "description": "Duis ante orci, molestie vitae vehicula venenatis, nemoe tincidunt ac pede. Integer vulputate sem a nibh rutrum consequat. Nulla quis diam. Duis risus. Nullam faucibus mi quis velit signer. Maecenas ipsum velit consectet"
+          }
+        },
+        "72a06018-b668-4a9e-a49c-2c1e6be2b624": {
+          "type": "article",
+          "settings": {
+            "article": "news\/10-elementary-rules-of-ui-design",
+            "description": "Duis ante orci, molestie vitae vehicula venenatis, nemoe tincidunt ac pede. Integer vulputate sem a nibh rutrum consequat. Nulla quis diam. Duis risus. Nullam faucibus mi quis velit signer. Maecenas ipsum velit consectet"
+          }
+        },
+        "133525b7-57e4-4c02-9b43-d5b802589b88": {
+          "type": "article",
+          "settings": {
+            "article": "news\/learn-to-manage-social-networks-adverts-1",
+            "description": "Duis ante orci, molestie vitae vehicula venenatis, nemoe tincidunt ac pede. Integer vulputate sem a nibh rutrum consequat. Nulla quis diam. Duis risus. Nullam faucibus mi quis velit signer. Maecenas ipsum velit consectet"
+          }
+        },
+        "77022718-7938-47dd-b2d7-b5509acd8fd0": {
+          "type": "article",
+          "settings": {
+            "article": "news\/how-to-become-successful-webdesigner",
+            "description": "Duis ante orci, molestie vitae vehicula venenatis, nemoe tincidunt ac pede. Integer vulputate sem a nibh rutrum consequat. Nulla quis diam. Duis risus. Nullam faucibus mi quis velit signer. Maecenas ipsum velit consectet"
+          }
+        }
+      },
+      "block_order": [
+        "6359dba0-060b-4091-b672-5c267d5703b0",
+        "8b27afdd-861a-4d85-b8e3-9216243f0b06",
+        "67d08230-3e20-49ac-b211-31d9a8bfc43b",
+        "25ddf5b3-0d9e-4672-824d-cf584ce05a76",
+        "72a06018-b668-4a9e-a49c-2c1e6be2b624",
+        "133525b7-57e4-4c02-9b43-d5b802589b88",
+        "77022718-7938-47dd-b2d7-b5509acd8fd0"
+      ],
+      "settings": {
+        "heading": "Shop Talk",
+        "heading_size": "h0",
+        "color_scheme": "background-1",
+        "image": "shopify:\/\/shop_images\/Rectangle_12_copy.jpg",
+        "H_hero": "small",
+        "text_align": "left",
+        "side_imag": "shopify:\/\/shop_images\/Group_104.png",
+        "article_count": 6,
+        "background_color": "#f6f8ff",
+        "article_title_size": "h2"
+      }
     }
   },
   "order": [
