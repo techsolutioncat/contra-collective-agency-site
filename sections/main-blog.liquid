@@ -40,12 +40,14 @@
     background: {{ section.settings.background_color }};
     margin-top: 60px;
 }
-#shopify-section-{{ section.id }} .blog-boday .article {
+#shopify-section-{{ section.id }} .blog-boday .article,
+#shopify-section-{{ section.id }} .blog-boday .top-blog {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block,
+#shopify-section-{{ section.id }} .blog-boday .top-blog .article-block {
     background: #fff;
     width: calc(33.33% - 30px);
     margin-bottom: 50px;
@@ -57,40 +59,53 @@
 #shopify-section-{{ section.id }} .blog-boday .article .article-block.visible-false {
     display: none;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-title {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-title,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-title
+{
     font-weight: bold;
     margin-top: 0px;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-content {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-content,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-content {
     padding: 0px 35px;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-content .article-description {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-content .article-description,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-content .article-description {
     font-size: 15px;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-image {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-image,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-image {
     height: 272px;
     padding: 15px;
     width: 100%;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-image img {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-image img,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-left: -25px;
     margin-top: -35px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%, 0 70%);
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-footer {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-footer,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-footer
+{
     margin: 35px;
     display: flex;
     justify-content: space-between;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-footer .post-date {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-footer .post-date,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-footer .post-date
+{
     border-left: 1px solid #CBCBCB;
     padding-left: 20px;
     font-size: 13px;
     color: #CBCBCB;
 }
-#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-footer .btn-read-more a {
+#shopify-section-{{ section.id }} .blog-boday .article .article-block .article-footer .btn-read-more a,
+#shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-footer .btn-read-more a
+{
     text-decoration: none;
     font-size: 11px;
     text-transform: uppercase;
@@ -117,12 +132,37 @@
     #shopify-section-{{ section.id }} .blog-boday .article .article-block {
         width: calc(50% - 30px);
     }
-    #shopify-section-{{ section.id }} .blog-boday .article .article-block .article-image img {
+    #shopify-section-{{ section.id }} .blog-boday .article .article-block .article-image img,
+    #shopify-section-{{ section.id }} .blog-boday .article .top-blog .article-image img {
         margin: 0px;
     }
 }
+
+#shopify-section-{{ section.id }} .blog-boday .top-blog {
+    margin-bottom: 80px;
+}
+#shopify-section-{{ section.id }} .blog-boday .top-blog .top-article1 {
+    width: 58%;
+    background: {{ section.settings.background_color }};
+    border: 1px solid #E7ECFF;
+    box-shadow: 0px 2px 31px rgba(246, 248, 255, 0.7);
+}
+#shopify-section-{{ section.id }} .blog-boday .top-blog .top-article2 {
+    width: 32%;
+    background: {{ section.settings.background_color }};
+    border: 1px solid #E7ECFF;
+    box-shadow: 0px 2px 31px rgba(246, 248, 255, 0.7);
+}
+#shopify-section-{{ section.id }} .blog-boday .top-blog img {
+    height: 100%;
+    width: 100%;
+}
+
 @media (max-width: 700px) {
-    #shopify-section-{{ section.id }} .blog-boday .article .article-block {
+    #shopify-section-{{ section.id }} .blog-boday .article .article-block,
+    #shopify-section-{{ section.id }} .blog-boday .top-blog .top-article1,
+    #shopify-section-{{ section.id }} .blog-boday .top-blog .top-article2
+    {
         width: 100%;
     }
 }
@@ -149,29 +189,83 @@
 
     <div class="blog-boday">
         <div class="article page-width">
-            {% if section.blocks.size > 0 %}
-                {% for block in section.blocks %}
-                    <div data-url="{{ block.settings.article.url }}" class="article-block article-{{ forloop.index }} {% if forloop.index <= section.settings.article_count %}visible-true{%else%}visible-false{% endif %}">
-                        <div class="article-image">
-                            {% if block.settings.article.image != blank %}
-                                <img src="{{ block.settings.article.image | image_url: width: large }}">
+            
+            <div class="top-blog">
+                <div data-url="{{ section.settings.article1.url }}" class="article-block top-article1">
+                    <div class="article-image">
+                        {% if section.settings.article_image1 != blank %}
+                            <img src="{{ section.settings.article_image1 | image_url: width: large }}">
+                        {% else %}
+                            <img src="{{ section.settings.article1.image | image_url: width: large }}">
+                        {% endif %}
+                    </div>
+                    <div class="article-content">
+                        <h2 class="article-title {{ section.settings.article_title_size }}">{{ section.settings.article1.title }}</h2>
+                        <div class="article-description">
+                            {% if section.settings.article1.excerpt != blank %}
+                                {{ section.settings.article1.excerpt | truncate: 200 }}
+                            {% else %}
+                                {{ section.settings.article1.content }}
                             {% endif %}
                         </div>
-                        <div class="article-content">
-                            <h2 class="article-title {{ section.settings.article_title_size }}">{{ block.settings.article.title }}</h2>
-                            <div class="article-description">
-                                {% if block.settings.article.excerpt != blank %}
-                                    {{ block.settings.article.excerpt | truncate: 200 }}
-                                {% else %}
-                                    {{ block.settings.article.content }}
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="article-footer">
-                            <div class="post-date">{{ block.settings.article.updated_at | date: "%b %d, %y" }}</div>
-                            <div class="btn-read-more"><a href="{{ block.settings.article.url }}">read more</a></div>
+                    </div>
+                    <div class="article-footer">
+                        <div class="post-date">{{ section.settings.article1.updated_at | date: "%b %d, %y" }}</div>
+                        <div class="btn-read-more"><a href="{{ section.settings.article1.url }}">read more</a></div>
+                    </div>
+                </div>
+                <div data-url="{{ section.settings.article2.url }}" class="article-block top-article2">
+                    <div class="article-image">
+                        {% if section.settings.article_image2 != blank %}
+                            <img src="{{ section.settings.article_image2 | image_url: width: large }}">
+                        {% else %}
+                            <img src="{{ section.settings.article2.image | image_url: width: large }}">
+                        {% endif %}
+                    </div>
+                    <div class="article-content">
+                        <h2 class="article-title {{ section.settings.article_title_size }}">{{ section.settings.article2.title }}</h2>
+                        <div class="article-description">
+                            {% if section.settings.article2.excerpt != blank %}
+                                {{ section.settings.article2.excerpt | truncate: 200 }}
+                            {% else %}
+                                {{ section.settings.article2.content }}
+                            {% endif %}
                         </div>
                     </div>
+                    <div class="article-footer">
+                        <div class="post-date">{{ section.settings.article2.updated_at | date: "%b %d, %y" }}</div>
+                        <div class="btn-read-more"><a href="{{ section.settings.article2.url }}">read more</a></div>
+                    </div>
+                </div>
+            </div>
+
+            {% if section.blocks.size > 0 %}
+                {% for block in section.blocks %}
+                    {% if block.settings.select_show == 'yes' %}
+                        <div data-url="{{ block.settings.article.url }}" class="article-block article-{{ forloop.index }} {% if forloop.index <= section.settings.article_count %}visible-true{%else%}visible-false{% endif %}">
+                            <div class="article-image">
+                                {% if block.settings.image != blank %}
+                                    <img src="{{ block.settings.image | image_url: width: large }}">
+                                {% else %}
+                                    <img src="{{ block.settings.article.image | image_url: width: large }}">
+                                {% endif %}
+                            </div>
+                            <div class="article-content">
+                                <h2 class="article-title {{ section.settings.article_title_size }}">{{ block.settings.article.title }}</h2>
+                                <div class="article-description">
+                                    {% if block.settings.article.excerpt != blank %}
+                                        {{ block.settings.article.excerpt | truncate: 200 }}
+                                    {% else %}
+                                        {{ block.settings.article.content }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="article-footer">
+                                <div class="post-date">{{ block.settings.article.updated_at | date: "%b %d, %y" }}</div>
+                                <div class="btn-read-more"><a href="{{ block.settings.article.url }}">read more</a></div>
+                            </div>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             {% endif %}
         </div>
@@ -188,7 +282,7 @@
     $( document ).ready(function() {
         $('#shopify-section-{{ section.id }} .blog-boday .article .article-block').on('click', function() {
             const url = $(this).data('url');
-            location.href = url;
+            window.open(url, '_blank');
         });
     });
 </script>
@@ -342,6 +436,31 @@
             ],
             "default": "h2",
             "label": "Article title size"
+        },
+        {
+            "type": "header",
+            "content": "Select top blog",
+            "info": "Select top blog"
+        },
+        {
+            "type": "article",
+            "id": "article1",
+            "label": "Select article1"
+        },
+        {
+            "type": "image_picker",
+            "id": "article_image1",
+            "label": "Select image1"
+        },
+        {
+            "type": "article",
+            "id": "article2",
+            "label": "Select article2"
+        },
+        {
+            "type": "image_picker",
+            "id": "article_image2",
+            "label": "Select image2"
         }
     ],
     "blocks":  [
@@ -353,6 +472,27 @@
                     "type": "article",
                     "id": "article",
                     "label": "Select article"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Select image"
+                },
+                {
+                    "type": "select",
+                    "id": "select_show",
+                    "options": [
+                        {
+                            "value": "yes",
+                            "label": "YES"
+                        },
+                        {
+                            "value": "no",
+                            "label": "NO"
+                        }
+                    ],
+                    "default": "yes",
+                    "label": "Display"
                 }
             ]
         }

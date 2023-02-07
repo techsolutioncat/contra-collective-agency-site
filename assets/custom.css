@@ -441,7 +441,7 @@ header.header {
     margin-top: 70px;
 }
 .our-result-section .grid .item {
-    width: 362px;
+    max-width: 360px;
     height: 205px;
     text-align: center;
     border: solid 3px rgb(232 237 241);
